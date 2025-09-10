@@ -2,31 +2,40 @@
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#0a0118] overflow-hidden min-h-[70vh] md:min-h-screen flex items-center">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0118] via-[#1a1a24] to-[#0a0118]" />
-      
+    <section className="relative overflow-hidden h-screen flex items-start pt-7">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Floating particles */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-[#146ef6] rounded-full animate-pulse opacity-60" />
-        <div className="absolute top-40 right-32 w-3 h-3 bg-[#2b7fff] rounded-full animate-bounce opacity-40" />
-        <div className="absolute bottom-32 left-1/4 w-1 h-1 bg-[#00b8db] rounded-full animate-ping opacity-50" />
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-[#146ef6] rounded-full animate-pulse opacity-30" />
+        {/* Enhanced floating particles */}
+        <div className="absolute top-16 left-4 md:top-20 md:left-20 w-2 h-2 bg-[#66B0FF] rounded-full animate-pulse opacity-60" />
+        <div className="absolute top-32 right-8 md:top-40 md:right-32 w-3 h-3 bg-[#4A90E2] rounded-full animate-bounce opacity-50" />
+        <div className="absolute bottom-24 left-1/4 w-1 h-1 bg-[#66B0FF] rounded-full animate-ping opacity-60" />
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-[#4A90E2] rounded-full animate-pulse opacity-40" />
+        <div className="absolute top-1/2 left-8 md:left-16 w-1 h-1 bg-[#66B0FF] rounded-full animate-ping opacity-50" />
+        <div className="absolute bottom-1/3 right-12 md:right-24 w-2 h-2 bg-[#4A90E2] rounded-full animate-bounce opacity-40" />
+        
+        {/* Animated orbs */}
+        <div className="absolute top-10 right-1/3 w-20 h-20 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" />
+        <div className="absolute bottom-10 left-1/4 w-32 h-32 bg-[#4A90E2] rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-pulse animation-delay-2000" />
         
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(20,110,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(20,110,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(102,176,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(102,176,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] md:bg-[size:50px_50px]" />
       </div>
 
-      {/* Full width container - no side spacing */}
-      <div className="w-full py-12 md:py-24 relative z-10">
+       {/* Full width container - optimized for viewport */}
+       <div className="w-full relative z-10">
         {/* Content and iPhone side by side layout */}
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-8 items-center justify-between px-4 md:px-12 lg:px-16 xl:px-20 max-w-[1400px] mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 xl:gap-12 items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-[1300px] mx-auto">
           
           {/* Left side - Content */}
-          <div className="flex-1 w-full max-w-[700px]">
-            {/* Main heading */}
-            <h1 className="font-['Poppins'] font-bold text-[30px] sm:text-[40px] md:text-[56px] lg:text-[64px] leading-[1.15] tracking-[-0.8px] text-left mb-4 md:mb-6">
+          <div className="flex-1 w-full max-w-[700px] text-center lg:text-left">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-[#66B0FF]/10 border border-[#66B0FF]/20 rounded-full px-4 py-2 mb-3 md:mb-4">
+              <div className="w-2 h-2 bg-[#66B0FF] rounded-full animate-pulse"></div>
+              <span className="text-[#66B0FF] text-sm font-medium">Trusted by 150+ Agencies Worldwide</span>
+            </div>
+            
+            {/* Main heading - optimized for viewport */}
+            <h1 className="font-['Poppins'] font-bold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] xl:text-[56px] leading-[1.1] tracking-[-0.02em] mb-3 md:mb-4">
               <span className="text-[#146ef6]">White Label Global Experts in Web,</span>
               <br />
               <span className="text-slate-50 relative">
@@ -36,21 +45,39 @@ export default function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-[15px] md:text-[18px] text-white/70 font-['Roboto'] leading-[1.7] mb-6 md:mb-8 max-w-[600px]">
-              We provide comprehensive global white-label technology solutions, working closely with a curated selection of agencies to serve as their trusted strategic technology partners. Our aim is to enhance their offerings and drive innovation in their projects.
+            <p className="text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] text-white/80 font-['Roboto'] leading-[1.5] mb-5 md:mb-6 max-w-[560px] mx-auto lg:mx-0">
+              We provide comprehensive global white-label technology solutions, working closely with a curated selection of agencies to serve as their trusted strategic technology partners.
             </p>
 
-            {/* CTA Button */}
-            <button className="group relative bg-[#146ef6] hover:bg-[#1257d3] text-white px-6 md:px-8 py-3 rounded-[8px] font-['Poppins'] font-semibold text-[15px] md:text-[18px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(20,110,246,0.4)] overflow-hidden mb-6 md:mb-8">
-              <span className="relative z-10">Connect with Team</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            </button>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start mb-4 md:mb-6">
+              <button className="group relative bg-gradient-to-r from-[#66B0FF] to-[#4A90E2] hover:from-[#5AA3FF] hover:to-[#3D7BC7] text-white px-7 py-3.5 rounded-xl font-['Poppins'] font-semibold text-[15px] transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_32px_rgba(102,176,255,0.4)] overflow-hidden min-w-[180px]">
+                <span className="relative z-10 flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                  Connect with Team
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              </button>
+              
+              <button className="group relative bg-white/10 backdrop-blur-sm border border-white/20 hover:border-[#66B0FF]/50 text-white px-7 py-3.5 rounded-xl font-['Poppins'] font-medium text-[15px] transition-all duration-300 hover:bg-white/20 min-w-[180px]">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  Watch Demo
+                </span>
+              </button>
+            </div>
 
             {/* Bottom text */}
-            <p className="text-[13px] md:text-[16px] text-white/60 font-['Roboto'] leading-[1.6] max-w-[580px]">
-              <span>Your trusted global partner for full-cycle digital development—backed by strict NDAs and complete confidentiality. </span>
-              <span className="text-[#146ef6] font-medium">No tech jargon, just clear communication, real results, and on-time delivery</span>
-              <span> tailored to your clients' needs.</span>
+            <p className="text-[12px] md:text-[14px] text-white/60 font-['Roboto'] leading-[1.5] max-w-[500px] mx-auto lg:mx-0">
+              <span className="text-[#66B0FF] font-medium">✓ Strict NDAs</span>
+              <span className="mx-2">•</span>
+              <span className="text-[#66B0FF] font-medium">✓ On-time delivery</span>
+              <span className="mx-2">•</span>
+              <span className="text-[#66B0FF] font-medium">✓ 24/7 support</span>
             </p>
           </div>
 
@@ -153,7 +180,6 @@ export default function Hero() {
         </div>
 
         {/* Background gradient overlay - using CSS gradients */}
-        <div className="pointer-events-none select-none absolute inset-0 w-full h-full opacity-30 z-[-1] bg-gradient-to-br from-[#146ef6]/10 via-transparent to-[#2b7fff]/10"></div>
       </div>
 
       {/* CSS for custom animations */}

@@ -94,32 +94,36 @@ export default function WhyChoose({ onConnect }: Props) {
   };
 
   return (
-    <section className="bg-[#0a0118] py-16 md:py-28 px-4 sm:px-8 lg:px-20 xl:px-[180px] relative overflow-hidden">
-      {/* Background decoration */}
+    <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
+      {/* Enhanced Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#146ef6] rounded-full mix-blend-multiply filter blur-xl opacity-10" />
-        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-[#2b7fff] rounded-full mix-blend-multiply filter blur-xl opacity-10" />
+        <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[#4A90E2] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-pulse animation-delay-4000" />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto">
+      <div className="relative z-10 max-w-[1400px] mx-auto backdrop-blur-md bg-[rgba(102,176,255,0.08)] border border-white/10 rounded-3xl p-6 md:p-8 lg:p-12 shadow-lg shadow-[#66B0FF]/10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="bg-[rgba(99,102,241,0.1)] inline-flex items-center justify-center px-4 py-2 rounded-full mb-6">
-            <span className="text-indigo-400 text-sm font-['Roboto'] font-medium">WHY CHOOSE US</span>
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
+          <div className="bg-gradient-to-r from-[#66B0FF]/10 to-[#4A90E2]/10 border border-[#66B0FF]/20 inline-flex items-center justify-center px-6 py-3 rounded-full mb-6">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#66B0FF] rounded-full animate-pulse"></div>
+              <span className="text-[#66B0FF] text-sm font-medium uppercase tracking-wide">WHY CHOOSE US</span>
+            </div>
           </div>
-          <h2 className="font-['Poppins'] font-bold text-[32px] sm:text-[48px] lg:text-[56px] leading-[1.1] tracking-[-0.5px] mb-6">
-            <span className="text-[#146ef6]">Trusted by Agencies</span>
-          <br />
+          <h2 className="font-['Poppins'] font-bold text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] tracking-[-0.02em] mb-6">
+            <span className="text-[#66B0FF]">Trusted by Agencies</span>
+            <br />
             <span className="text-slate-50">Worldwide</span>
-        </h2>
-          <p className="text-zinc-400 text-[16px] md:text-[18px] font-['Roboto'] leading-[1.6] max-w-[700px] mx-auto">
+          </h2>
+          <p className="text-white/70 text-[16px] md:text-[17px] lg:text-[18px] font-['Roboto'] leading-[1.6] max-w-[700px] mx-auto px-4">
             We're not just another development team—we're your strategic technology partner, dedicated to making your agency more successful.
           </p>
-      </div>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start">
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group">
                 <div className="flex items-start gap-4">

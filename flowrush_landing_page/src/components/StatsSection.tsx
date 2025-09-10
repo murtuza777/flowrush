@@ -39,23 +39,32 @@ const ShieldIcon = () => (
 
 export default function StatsSection() {
   return (
-    <div className="bg-[#0a0a0f] box-border content-stretch flex flex-col gap-[40px] md:gap-[60px] items-start justify-start px-4 sm:px-8 lg:px-20 xl:px-[180px] py-16 md:py-28 relative w-full">
-      <div className="content-stretch flex flex-col gap-3 items-center justify-start w-full">
-        <div className="bg-[rgba(99,102,241,0.1)] box-border inline-flex items-start justify-center px-[15px] py-2 rounded-[99999999px]">
-          <span className="text-indigo-500 text-[14px] leading-[1.6] font-['Roboto']">PROVEN RESULTS</span>
+    <div className="box-border content-stretch flex flex-col gap-8 md:gap-12 lg:gap-16 items-start justify-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-16 md:py-20 lg:py-28 relative w-full">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#4A90E2] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-2000" />
+      </div>
+      
+      <div className="content-stretch flex flex-col gap-4 md:gap-6 items-center justify-start w-full relative z-10">
+        <div className="bg-gradient-to-r from-[#66B0FF]/10 to-[#4A90E2]/10 border border-[#66B0FF]/20 box-border inline-flex items-center justify-center px-6 py-3 rounded-full">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-[#66B0FF] rounded-full animate-pulse"></div>
+            <span className="text-[#66B0FF] text-sm font-medium uppercase tracking-wide">PROVEN RESULTS</span>
+          </div>
         </div>
-        <div className="text-center font-['Poppins'] font-bold leading-[1.2] tracking-[-0.32px] text-[32px] sm:text-[48px] lg:text-[64px]">
-          <p className="text-[#146ef6] mb-0">White-Label Development</p>
+        <div className="text-center font-['Poppins'] font-bold leading-[1.1] tracking-[-0.02em] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px]">
+          <p className="text-[#66B0FF] mb-2 md:mb-4">White-Label Development</p>
           <p className="text-slate-50">You Can Rely On</p>
         </div>
-        <p className="text-zinc-500 text-[15px] md:text-[16px] font-['Roboto'] leading-[1.7] text-center max-w-[980px] px-2">
-          Focus on growing your business while we handle the technical execution behind the scenes. Our white-label development services are designed for agencies and consultants who need a dependable partner to deliver high-quality web, software, and app solutions—on time, on brand, and under strict confidentiality.
+        <p className="text-white/70 text-[16px] md:text-[17px] lg:text-[18px] font-['Roboto'] leading-[1.6] text-center max-w-[800px] px-4">
+          Focus on growing your business while we handle the technical execution behind the scenes. Our white-label development services are designed for agencies and consultants who need a dependable partner to deliver high-quality solutions.
         </p>
       </div>
       
-      <div className="content-stretch flex flex-col lg:flex-row gap-10 lg:gap-20 items-stretch justify-start w-full">
-        <div className="basis-0 flex flex-col gap-7 grow">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="content-stretch flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 items-stretch justify-start w-full relative z-10">
+        <div className="basis-0 flex flex-col gap-6 lg:gap-8 grow">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {/* Card 1 */}
             <div className="backdrop-blur rounded-[21px] relative grow min-w-60 border border-white/5">
               <div className="p-6 flex flex-col gap-2.5 items-end">
@@ -144,7 +153,7 @@ export default function StatsSection() {
         </div>
 
         <div className="basis-0 flex flex-col gap-6 grow">
-          <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.4)] rounded-[21px] border border-white/5 p-6">
+          <div className="backdrop-blur-md bg-[rgba(30,58,138,0.15)] rounded-[21px] border border-white/20 p-6 shadow-lg shadow-blue-500/10">
             <div className="flex items-center gap-2 mb-4">
               <div className="relative size-[18px] text-[#146ef6]">
                 <TrendingIcon />
@@ -152,7 +161,7 @@ export default function StatsSection() {
               <div className="text-[18px] text-slate-50 font-['Poppins']">Performance Metrics</div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-4 py-3 flex items-center gap-3">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
                 <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
                   <div className="relative size-[18px] text-[#146ef6]">
                     <CheckIcon />
@@ -164,7 +173,7 @@ export default function StatsSection() {
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-4 py-3 flex items-center gap-3">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
                 <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
                   <div className="relative size-[18px] text-[#00b8db]">
                     <ShieldIcon />
@@ -176,7 +185,7 @@ export default function StatsSection() {
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-4 py-3 flex items-center gap-3">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
                 <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
                   <div className="relative size-[18px] text-[#2b7fff]">
                     <TrendingIcon />
@@ -188,7 +197,7 @@ export default function StatsSection() {
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-4 py-3 flex items-center gap-3">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
                 <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
                   <div className="relative size-[18px] text-[#146ef6]">
                     <UsersIcon />

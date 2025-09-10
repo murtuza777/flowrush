@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Modal from './components/Modal';
 import ContactForm from './components/ContactForm';
 import FloatingButtons from './components/FloatingButtons';
+import Silk from './components/Silk';
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -21,12 +22,25 @@ function App() {
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-dark text-white">
-      {/* Header */}
-      <Header 
-        onOpenAbout={() => setIsAboutModalOpen(true)}
-        onOpenContact={() => setIsContactModalOpen(true)}
-      />
+    <div className="min-h-screen text-white relative">
+      {/* Animated Background */}
+      <div className="fixed inset-0 z-0 w-full h-full">
+        <Silk
+          speed={5}
+          scale={1}
+          color="#7B7481"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Header */}
+        <Header 
+          onOpenAbout={() => setIsAboutModalOpen(true)}
+          onOpenContact={() => setIsContactModalOpen(true)}
+        />
       
       {/* Main Content */}
       <main>
@@ -118,6 +132,7 @@ function App() {
           </p>
         </div>
       </Modal>
+      </div>
     </div>
   );
 }

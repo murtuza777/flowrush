@@ -216,40 +216,33 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
   );
 
   return (
-    <header className="sticky top-0 z-50">
-      <div className="backdrop-blur-[20px] backdrop-filter bg-[rgba(26,26,36,0.7)] border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
-        <div className="w-full max-w-[1440px] mx-auto py-4 md:py-6 flex items-center justify-between px-4 md:px-8 lg:px-12 xl:px-16 relative">
+    <header className="sticky top-0 z-50 px-4 py-2 md:py-3">
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="backdrop-blur-md bg-[rgba(30,58,138,0.2)] border border-white/20 rounded-full shadow-lg shadow-blue-500/10 px-6 py-3 flex items-center justify-between">
           <div className="h-[40px] w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${HEADER_ASSETS.logo}')` }} />
 
-          {/* Navigation - Updated with Services mega dropdown */}
-          <nav className="hidden lg:flex items-center gap-1 text-[16px] font-['Roboto'] leading-[1.6]">
-            {/* Services Mega Dropdown */}
+          {/* Navigation - Clean minimal design */}
+          <nav className="hidden lg:flex items-center gap-8 text-white">
             <div className="relative">
               <button 
                 onClick={toggleServices}
-                className={`flex gap-1.5 items-center px-4 py-2.5 rounded-md transition-all duration-300 hover:bg-white/5 ${
-                  servicesOpen ? 'text-white bg-white/5' : 'text-gray-300 hover:text-white'
-                }`}
+                className="flex items-center gap-1 hover:text-blue-300 transition-colors duration-200"
               >
-                <span className="whitespace-nowrap text-[15px]">Services</span>
-                <span className={`${servicesOpen ? 'text-white' : 'text-gray-400'} flex items-center`}>
-                  <ChevronDownIcon rotated={servicesOpen} />
-                </span>
+                <span>Services</span>
+                <ChevronDownIcon rotated={servicesOpen} />
               </button>
               {servicesOpen && <ServicesMegaDropdown />}
             </div>
-            {/* About */}
             <button 
               onClick={onOpenAbout} 
-              className="px-4 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-all duration-300 text-[15px] whitespace-nowrap"
+              className="hover:text-blue-300 transition-colors duration-200"
             >
               About
             </button>
-
-            {/* Contact */}
+            
             <button 
               onClick={onOpenContact} 
-              className="px-4 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-md transition-all duration-300 text-[15px] whitespace-nowrap"
+              className="hover:text-blue-300 transition-colors duration-200"
             >
               Contact
             </button>
@@ -277,23 +270,19 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
             href="https://calendly.com/sahaj-baveja"
             target="_blank"
             rel="noreferrer"
-            className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-[#146ef6] via-[#2b7fff] to-[#00b8db] hover:from-[#1257d3] hover:via-[#1d6aed] hover:to-[#0099c7] text-white px-6 py-2.5 font-['Poppins'] font-medium text-[15px] leading-normal transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(20,110,246,0.4)] whitespace-nowrap shadow-lg"
+            className="bg-gradient-to-r from-blue-500 to-blue-900 hover:from-blue-400 hover:to-blue-800 text-white px-6 py-2 rounded-full transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-blue-500/20"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Book a Meeting
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Book a Meeting
           </a>
         </div>
       </div>
       
       {/* Mobile slide-down menu */}
       {mobileOpen && (
-        <div className="lg:hidden backdrop-blur-[20px] bg-[rgba(26,26,36,0.95)] border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+        <div className="lg:hidden backdrop-blur-md bg-[rgba(30,58,138,0.3)] border border-white/20 mx-4 mt-2 rounded-2xl shadow-lg shadow-blue-500/10">
           <div className="max-w-[1440px] mx-auto px-4 py-4 space-y-2">
             {/* Services Mobile Dropdown */}
             <details className="group">

@@ -62,7 +62,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   
   return (
-    <section className="bg-[#0a0a0f] py-28 px-6 sm:px-10 lg:px-[180px] relative overflow-hidden">
+    <section className="py-28 px-6 sm:px-10 lg:px-[180px] relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Grid pattern */}
@@ -79,7 +79,7 @@ export default function FAQ() {
         <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-[#ad46ff] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto">
+      <div className="relative z-10 max-w-[1200px] mx-auto backdrop-blur-md bg-[rgba(30,58,138,0.1)] border border-white/10 rounded-2xl p-8 shadow-lg shadow-blue-500/10">
         {/* Header */}
         <div className="text-center mb-20 space-y-6">
           <h2 className="font-['Poppins'] font-bold text-[40px] md:text-[64px] leading-[1.2] tracking-[-0.32px]">
