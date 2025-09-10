@@ -1,36 +1,58 @@
 import { useState } from 'react';
+import { TOOLS_ASSETS } from '../assets';
 
-// Technology images from Figma assets
-const reactLogo = "http://localhost:3845/assets/eb38569d77304f55bdd7ce9ce190337c2b9f40ed.png";
-// Removed unused logo constants to satisfy TS6133
+// Simple SVG icons for category representation
+const WebIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+  </svg>
+);
 
-// Category icons
-const webDevIcon1 = "http://localhost:3845/assets/fa441c9148a858390b6118ce70ff208af23ba1be.svg";
-const webDevIcon2 = "http://localhost:3845/assets/e40a8827ab879be681672499f7d4dd1d1f86a3aa.svg";
-const mobileIcon1 = "http://localhost:3845/assets/68b3406b8f2daaf099b4ea9c8494a9ca7d7d4d28.svg";
-const mobileIcon2 = "http://localhost:3845/assets/80eb2913b96fe574e3230a1bfafcb7e521fb245d.svg";
-const cloudIcon = "http://localhost:3845/assets/943e2798a3490ea4dd7172d1d9459f3c894d54ec.svg";
-const aiIcon1 = "http://localhost:3845/assets/52e10041b823bb9aae6c6591230bec190aba6e3b.svg";
-const seoIcon1 = "http://localhost:3845/assets/e545a3ae0f2c2fe841ddb8b30c02d0e888268650.svg";
-const seoIcon2 = "http://localhost:3845/assets/bd53cbd8a89bb77d04650883e4c88192c598ee03.svg";
-const designIcon1 = "http://localhost:3845/assets/074af0276db523dc65c316bf2971b3ad0ba553e9.svg";
-const designIcon2 = "http://localhost:3845/assets/f47d59a5f807dd8d9717c25ae064be6bc788e2f9.svg";
+const MobileIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" />
+  </svg>
+);
+
+const CloudIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9" />
+  </svg>
+);
+
+const AIIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  </svg>
+);
+
+const SEOIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+  </svg>
+);
+
+const DesignIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4 4 4 0 004-4V5z" />
+  </svg>
+);
 
 export default function Tools() {
   const [activeCategory, setActiveCategory] = useState('Web Development');
 
   const categories = [
-    { name: 'Web Development', icon: [webDevIcon1, webDevIcon2] },
-    { name: 'Mobile Development', icon: [mobileIcon1, mobileIcon2] },
-    { name: 'Cloud & DevOps', icon: [cloudIcon] },
-    { name: 'AI & Machine Learning', icon: [aiIcon1] },
-    { name: 'SEO & Analytics', icon: [seoIcon1, seoIcon2] },
-    { name: 'Design & UX', icon: [designIcon1, designIcon2] }
+    { name: 'Web Development', icon: [WebIcon, WebIcon] },
+    { name: 'Mobile Development', icon: [MobileIcon, MobileIcon] },
+    { name: 'Cloud & DevOps', icon: [CloudIcon] },
+    { name: 'AI & Machine Learning', icon: [AIIcon] },
+    { name: 'SEO & Analytics', icon: [SEOIcon, SEOIcon] },
+    { name: 'Design & UX', icon: [DesignIcon, DesignIcon] }
   ];
 
   const technologiesByCategory = {
     'Web Development': [
-      { name: 'React', logo: reactLogo },
+      { name: 'React', logo: TOOLS_ASSETS.react },
       { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
       { name: 'Vue.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg' },
       { name: 'Angular', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg' },

@@ -1,31 +1,29 @@
 import React from 'react';
 
-const img = "http://localhost:3845/assets/469ff531bf2f90e7dae19517b3c8817ef4e81e56.svg";
-const img1 = "http://localhost:3845/assets/75aafd4050c08fa695eac9fea001ca819f9db7ff.svg";
-const img2 = "http://localhost:3845/assets/9aa09d9fbeda8982810d48a90fe1d791ddbb9ea7.svg";
-const img3 = "http://localhost:3845/assets/194daa3de9578f76bceafd3d4ed4fd0f0631d597.svg";
-const img4 = "http://localhost:3845/assets/e3b14d4751384c03cd9a144a3fcd65f78531ef29.svg";
-const img5 = "http://localhost:3845/assets/2b7d6d02484530ad7d931a7b38cc25dbadf251b8.svg";
-const img6 = "http://localhost:3845/assets/9528b4f4f39543e909b948885e61397d6588f47e.svg";
-const img7 = "http://localhost:3845/assets/9432408e4ab6fe848665341d0a612110233c0ec5.svg";
-const img8 = "http://localhost:3845/assets/04de34070af6cd831b5d9d51a22c062195370dc1.svg";
-const img9 = "http://localhost:3845/assets/83e270497b5f605b49c89f7e6d12e18cef28274b.svg";
-const img10 = "http://localhost:3845/assets/277fab1880b39cba12ead0e02f8cf72fd8932d2c.svg";
-const img11 = "http://localhost:3845/assets/ae5fd6366b000c397abbf3e0c88ee12ea4ce5b0a.svg";
-const img12 = "http://localhost:3845/assets/d0c630a87fce3abc956c7ad642e6a4586a8813d5.svg";
-const img13 = "http://localhost:3845/assets/426dbea4d5b44d1df6958887b0862baa83a3d68e.svg";
-const img14 = "http://localhost:3845/assets/cc02d1d1d63a07f1448938947c55efcb05f7ffa1.svg";
-const img15 = "http://localhost:3845/assets/818eaceac63549cb0fdc45c9b79fa2a5be630153.svg";
-const img16 = "http://localhost:3845/assets/cd516a236a975b846b79c8bce739c3dde6e1964a.svg";
-const img17 = "http://localhost:3845/assets/b23c261c30a813b0416d8de9af6d95aed7f266ee.svg";
-const img18 = "http://localhost:3845/assets/7bfc8aa13d8ce931e04221ee2607e9caabbe0e5b.svg";
-const img19 = "http://localhost:3845/assets/3af5a8725792d8f3d22fa3230bfbe8f76b678e4a.svg";
-const img20 = "http://localhost:3845/assets/ab6b419771433ff4c149a83e227a67e7eb28ba90.svg";
-const img21 = "http://localhost:3845/assets/e1371d98c43e1db9e0104d69625a8ea2c652ad6e.svg";
-const img22 = "http://localhost:3845/assets/c37cfba59fd5c535c75c67a50a1ac4a337acf04d.svg";
-const img23 = "http://localhost:3845/assets/05c8d6ac9f95cee788eb2e0102ad02875d27cb69.svg";
-const img24 = "http://localhost:3845/assets/643e6274c5e1d5e8859908e2cae4dd2678c61403.svg";
-const img25 = "http://localhost:3845/assets/9e1a466d826f070a46a2fba742aba818e61c82b6.svg";
+// Using simple SVG icons instead of external assets for deployment compatibility
+const CheckIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+  </svg>
+);
+
+const StarIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+  </svg>
+);
+
+const TrendingIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+  </svg>
+);
+
+const UsersIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+  </svg>
+);
 
 export default function StatsSectionFigma() {
   return (
@@ -41,7 +39,7 @@ export default function StatsSectionFigma() {
             {/* Card 1 */}
             <div className="backdrop-blur rounded-[21px] relative grow min-w-60">
               <div className="p-6 flex flex-col gap-2.5 items-end">
-                <div className="relative size-9"><div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4"><img alt="" className="w-full h-full" src={img} /></div><div className="absolute bottom-1/4 left-[8.33%] right-[66.67%] top-1/4"><img alt="" className="w-full h-full" src={img1} /></div></div>
+                <div className="relative size-9"><div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4 text-[#2b7fff]"><CheckIcon /></div><div className="absolute bottom-1/4 left-[8.33%] right-[66.67%] top-1/4 text-[#00b8db]"><StarIcon /></div></div>
                 <div className="w-full">
                   <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>2,000+</div>
                   <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />

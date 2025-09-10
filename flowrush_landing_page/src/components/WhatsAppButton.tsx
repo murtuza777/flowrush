@@ -1,15 +1,8 @@
 import { useState, useEffect } from 'react';
 
 export default function WhatsAppButton() {
-  const [isVisible, setIsVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
-  // Show button after page load
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Show tooltip after 3 seconds
   useEffect(() => {
@@ -20,7 +13,7 @@ export default function WhatsAppButton() {
   return (
     <>
       {/* WhatsApp Floating Button */}
-      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className="fixed bottom-6 right-6 z-50">
         {/* Tooltip */}
         {showTooltip && (
           <div className={`absolute bottom-20 right-0 mb-2 transition-all duration-300 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
@@ -48,18 +41,11 @@ export default function WhatsAppButton() {
         >
           {/* Button Container */}
           <div className="relative w-16 h-16 md:w-18 md:h-18">
-            {/* Animated Ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-green-500 animate-ping opacity-20"></div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-green-500 animate-pulse opacity-30"></div>
-            
             {/* Main Button */}
-            <div className="relative w-full h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(34,197,94,0.4)] hover:shadow-[0_12px_40px_rgba(34,197,94,0.6)] hover:scale-110 transition-all duration-300 group-hover:rotate-12 overflow-hidden">
-              {/* Shimmer Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              
+            <div className="relative w-full h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(34,197,94,0.4)] hover:shadow-[0_12px_40px_rgba(34,197,94,0.6)] hover:scale-105 transition-all duration-300 overflow-hidden">
               {/* WhatsApp Icon */}
               <svg 
-                className="w-8 h-8 md:w-9 md:h-9 text-white group-hover:scale-110 transition-transform duration-300 relative z-10" 
+                className="w-8 h-8 md:w-9 md:h-9 text-white transition-transform duration-300 relative z-10" 
                 fill="currentColor" 
                 viewBox="0 0 24 24"
               >
@@ -67,55 +53,12 @@ export default function WhatsAppButton() {
               </svg>
             </div>
 
-            {/* Notification Badge */}
-            <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg animate-bounce">
-              <span className="text-white text-xs font-bold">!</span>
-            </div>
-
             {/* Online Status Indicator */}
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-pulse">
-              <div className="w-full h-full bg-green-400 rounded-full animate-ping"></div>
+            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white">
             </div>
           </div>
         </a>
-
-        {/* Floating Particles */}
-        <div className="absolute -top-4 -left-4 w-2 h-2 bg-green-400 rounded-full animate-ping opacity-60"></div>
-        <div className="absolute -bottom-2 -left-6 w-1 h-1 bg-green-300 rounded-full animate-bounce opacity-40"></div>
-        <div className="absolute top-2 -right-8 w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse opacity-50"></div>
       </div>
-
-      {/* Custom Styles */}
-      <style>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes wiggle {
-          0%, 100% {
-            transform: rotate(0deg);
-          }
-          25% {
-            transform: rotate(5deg);
-          }
-          75% {
-            transform: rotate(-5deg);
-          }
-        }
-        
-        .animate-wiggle {
-          animation: wiggle 2s ease-in-out infinite;
-        }
-      `}</style>
     </>
   );
 }

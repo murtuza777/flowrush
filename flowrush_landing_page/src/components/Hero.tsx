@@ -1,8 +1,6 @@
 
- 
-import { HERO_ASSETS } from '../assets';
 
-export default function HeroFigma() {
+export default function Hero() {
   return (
     <section className="relative bg-[#0a0118] overflow-hidden min-h-[70vh] md:min-h-screen flex items-center">
       {/* Background gradient */}
@@ -59,14 +57,23 @@ export default function HeroFigma() {
           {/* Right side - Enhanced iPhone Animation */}
           <div className="flex-1 w-full flex justify-center lg:justify-end items-center">
             <div className="relative">
-              {/* Larger animated iPhone mockup */}
+              {/* Larger animated dashboard mockup */}
               <div className="relative w-[260px] sm:w-[320px] md:w-[420px] lg:w-[480px]">
-                {/* Background hero preview */}
-                <img 
-                  src={HERO_ASSETS.heroPreview} 
-                  alt="Dashboard preview" 
-                  className="w-full h-auto object-contain drop-shadow-2xl opacity-80" 
-                />
+                {/* Background dashboard preview - using CSS graphics */}
+                <div className="w-full h-auto bg-gradient-to-br from-[#1a1a24] to-[#0a0118] rounded-2xl border border-white/10 drop-shadow-2xl opacity-80 aspect-[4/3] flex items-center justify-center">
+                  <div className="w-[80%] h-[80%] bg-gradient-to-br from-[#146ef6]/20 to-[#2b7fff]/10 rounded-lg border border-[#146ef6]/20 flex flex-col p-4 gap-3">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 space-y-2">
+                      <div className="w-full h-2 bg-[#146ef6]/30 rounded"></div>
+                      <div className="w-3/4 h-2 bg-[#2b7fff]/20 rounded"></div>
+                      <div className="w-1/2 h-2 bg-[#00b8db]/20 rounded"></div>
+                    </div>
+                  </div>
+                </div>
                 
                 {/* Floating iPhone container with enhanced animation */}
                 <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
@@ -145,8 +152,8 @@ export default function HeroFigma() {
           </div>
         </div>
 
-        {/* Background gradient overlay */}
-        <img src={HERO_ASSETS.imgGradient} alt="gradient" className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover opacity-30 z-[-1]" />
+        {/* Background gradient overlay - using CSS gradients */}
+        <div className="pointer-events-none select-none absolute inset-0 w-full h-full opacity-30 z-[-1] bg-gradient-to-br from-[#146ef6]/10 via-transparent to-[#2b7fff]/10"></div>
       </div>
 
       {/* CSS for custom animations */}

@@ -1,7 +1,9 @@
- 
-
-// Figma-exported asset
-const img15Checked = "http://localhost:3845/assets/e89417c1e8ec39b0bfdda54c0e50af7ee044899b.svg";
+// Simple check icon for deployment compatibility
+const CheckIcon = () => (
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+  </svg>
+);
 
 export default function PartnerExcellence() {
   return (
@@ -42,15 +44,15 @@ export default function PartnerExcellence() {
           {/* Bottom divider + bullets */}
           <div className="w-full pt-11 mt-10 border-t border-white/5 flex flex-wrap gap-7 items-center justify-center">
             <div className="flex items-center gap-2 text-[14px] text-zinc-400">
-              <img src={img15Checked} alt="checked" className="w-6 h-6" />
+              <div className="w-6 h-6 text-[#146ef6]"><CheckIcon /></div>
               <span>150+ Agencies Trust Us</span>
             </div>
             <div className="flex items-center gap-2 text-[14px] text-zinc-400">
-              <img src={img15Checked} alt="checked" className="w-6 h-6" />
+              <div className="w-6 h-6 text-[#146ef6]"><CheckIcon /></div>
               <span>24/7 Global Support</span>
             </div>
             <div className="flex items-center gap-2 text-[14px] text-zinc-400">
-              <img src={img15Checked} alt="checked" className="w-6 h-6" />
+              <div className="w-6 h-6 text-[#146ef6]"><CheckIcon /></div>
               <span>NDA Protected</span>
             </div>
           </div>

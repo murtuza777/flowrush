@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import HeaderFigma from './components/HeaderFigma';
-import HeroFigma from './components/HeroFigma';
+import Header from './components/Header';
+import Hero from './components/Hero';
 import Marquee from './components/Marquee';
-import StatsSection from './components/StatsSectionFigma';
+import StatsSection from './components/StatsSection';
 import ProcessSteps from './components/ProcessSteps';
 import Tools from './components/Tools';
 import WhyChoose from './components/WhyChoose';
@@ -12,6 +12,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 import ContactForm from './components/ContactForm';
+import FloatingButtons from './components/FloatingButtons';
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -22,14 +23,14 @@ function App() {
   return (
     <div className="min-h-screen bg-dark text-white">
       {/* Header */}
-      <HeaderFigma 
+      <Header 
         onOpenAbout={() => setIsAboutModalOpen(true)}
         onOpenContact={() => setIsContactModalOpen(true)}
       />
       
       {/* Main Content */}
       <main>
-        <HeroFigma />
+        <Hero />
         <Marquee />
         <WhyChoose onConnect={() => setIsContactModalOpen(true)} />
         <StatsSection />
@@ -48,6 +49,9 @@ function App() {
         onOpenTerms={() => setIsTermsModalOpen(true)}
       />
 
+      {/* Floating Buttons */}
+      <FloatingButtons onOpenContact={() => setIsContactModalOpen(true)} />
+
       {/* Modals */}
       <Modal 
         open={isContactModalOpen} 
@@ -64,10 +68,13 @@ function App() {
       >
         <div className="space-y-4">
           <p className="text-gray-300 leading-relaxed">
-            Flowrush Technologies is a leading white-label development partner specializing in web, software, and app development solutions. We work seamlessly with agencies worldwide to deliver exceptional results while keeping your brand front and center.
+            Flowrush Technologies is the specialized technology arm of Flowrush and Zencore Marketing LLP, created to deliver cutting-edge white-label solutions for agencies and enterprises worldwide. As a dedicated brand under Zencore, we focus on empowering businesses with scalable, future-ready technology services while allowing them to present solutions under their own name.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            With over 8 years of experience and 150+ agency partnerships, we provide comprehensive technology solutions backed by strict NDAs and complete confidentiality.
+            Our expertise spans across web development, app development, SaaS platforms, AI/ML solutions, cloud services, and custom enterprise tech deliverables. We work seamlessly with marketing agencies, digital firms, and corporations, ensuring that their clients experience world-class services backed by the latest technology stacks.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            With a foundation of trust, innovation, and over a decade of global delivery excellence, Flowrush Technologies has become the go-to partner for agencies looking for discreet, reliable, and high-quality white-label tech solutions. We don't just deliver projects; we build long-term partnerships that enable our clients to scale faster and stay ahead in a competitive digital ecosystem.
           </p>
         </div>
       </Modal>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
+import { HEADER_ASSETS } from '../assets';
 
 type HeaderFigmaProps = {
   onOpenAbout: () => void;
   onOpenContact: () => void;
 };
-
-const logo = "http://localhost:3845/assets/bc279bc77c1bdeb307f551ea573887432a096828.png";
 // Inline chevron icon to avoid external assets
 const ChevronDownIcon = ({ rotated }: { rotated: boolean }) => (
   <svg
@@ -204,7 +203,7 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
     <header className="sticky top-0 z-50">
       <div className="backdrop-blur-[2px] backdrop-filter bg-[rgba(26,26,36,0.8)] border-b border-white/5">
         <div className="w-full max-w-[1440px] mx-auto py-4 md:py-6 flex items-center justify-between px-4 md:px-8 lg:px-12 xl:px-16 relative">
-          <div className="h-[40px] w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${logo}')` }} />
+          <div className="h-[40px] w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${HEADER_ASSETS.logo}')` }} />
 
           {/* Navigation - Properly spaced for Figma design */}
           <nav className="hidden lg:flex items-center gap-1 text-[16px] font-['Roboto'] leading-[1.6]">
