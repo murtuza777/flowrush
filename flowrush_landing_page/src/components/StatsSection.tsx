@@ -38,7 +38,7 @@ const ShieldIcon = () => (
 
 export default function StatsSection() {
   return (
-    <div className="box-border content-stretch flex flex-col gap-8 md:gap-12 lg:gap-16 items-start justify-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-16 md:py-20 lg:py-28 relative w-full">
+    <div className="box-border content-stretch flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start justify-start px-3 sm:px-4 md:px-8 lg:px-12 xl:px-20 py-12 sm:py-16 md:py-20 lg:py-28 relative w-full">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-pulse" />
@@ -46,28 +46,28 @@ export default function StatsSection() {
       </div>
       
       <div className="content-stretch flex flex-col gap-4 md:gap-6 items-center justify-start w-full relative z-10">
-        <div className="bg-gradient-to-r from-[#66B0FF]/10 to-[#4A90E2]/10 border border-[#66B0FF]/20 box-border inline-flex items-center justify-center px-6 py-3 rounded-full">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-[#66B0FF] rounded-full animate-pulse"></div>
-            <span className="text-[#66B0FF] text-sm font-medium uppercase tracking-wide">PROVEN RESULTS</span>
+        <div className="bg-gradient-to-r from-[#66B0FF]/10 to-[#4A90E2]/10 border border-[#66B0FF]/20 box-border inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 rounded-full">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#66B0FF] rounded-full animate-pulse"></div>
+            <span className="text-[#66B0FF] text-xs sm:text-sm font-medium uppercase tracking-wide">PROVEN RESULTS</span>
           </div>
         </div>
-        <div className="text-center font-['Poppins'] font-bold leading-[1.1] tracking-[-0.02em] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px]">
-          <p className="text-[#66B0FF] mb-2 md:mb-4">White-Label Development</p>
+        <div className="text-center font-['Poppins'] font-bold leading-[1.2] sm:leading-[1.1] tracking-[-0.02em] text-[22px] xs:text-[26px] sm:text-[32px] md:text-[42px] lg:text-[56px] xl:text-[64px] px-2 sm:px-0">
+          <p className="text-[#66B0FF] mb-1 sm:mb-2 md:mb-4">White-Label Development</p>
           <p className="text-slate-50">You Can Rely On</p>
         </div>
-        <p className="text-white/70 text-[16px] md:text-[17px] lg:text-[18px] font-['Roboto'] leading-[1.6] text-center max-w-[800px] px-4">
+        <p className="text-white/70 text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] font-['Roboto'] leading-[1.6] text-center max-w-[800px] px-3 sm:px-4">
           Focus on growing your business while we handle the technical execution behind the scenes. Our white-label development services are designed for agencies and consultants who need a dependable partner to deliver high-quality solutions.
         </p>
       </div>
       
-      <div className="content-stretch flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 items-stretch justify-start w-full relative z-10">
-        <div className="basis-0 flex flex-col gap-6 lg:gap-8 grow">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+      <div className="content-stretch flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 xl:gap-16 items-stretch justify-start w-full relative z-10">
+        <div className="basis-0 flex flex-col gap-4 sm:gap-6 lg:gap-8 grow">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
             {/* Card 1 */}
-            <div className="backdrop-blur rounded-[21px] relative grow min-w-60 border border-white/5">
-              <div className="p-6 flex flex-col gap-2.5 items-end">
-                <div className="relative size-9">
+            <div className="backdrop-blur rounded-[16px] sm:rounded-[21px] relative grow min-w-[140px] sm:min-w-60 border border-white/5">
+              <div className="p-4 sm:p-6 flex flex-col gap-2 sm:gap-2.5 items-end">
+                <div className="relative size-6 sm:size-9">
                   <div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4 text-[#2b7fff]">
                     <CheckIcon />
                   </div>
@@ -76,20 +76,20 @@ export default function StatsSection() {
                   </div>
                 </div>
                 <div className="w-full">
-                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>2,000+</div>
-                  <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
+                  <div className="text-[28px] sm:text-[40px] md:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>2,000+</div>
+                  <div className="h-[2.5px] sm:h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full">
-                  <div className="text-[18px] text-slate-50 font-['Poppins']">projects delivered</div>
-                  <div className="text-[14px] text-zinc-500 font-['Roboto']">Successfully completed</div>
+                  <div className="text-[14px] sm:text-[16px] md:text-[18px] text-slate-50 font-['Poppins']">projects delivered</div>
+                  <div className="text-[12px] sm:text-[14px] text-zinc-500 font-['Roboto']">Successfully completed</div>
                 </div>
               </div>
             </div>
             
             {/* Card 2 */}
-            <div className="backdrop-blur rounded-[21px] relative grow min-w-60 border border-white/5">
-              <div className="p-6 flex flex-col gap-2.5 items-end">
-                <div className="relative size-9">
+            <div className="backdrop-blur rounded-[16px] sm:rounded-[21px] relative grow min-w-[140px] sm:min-w-60 border border-white/5">
+              <div className="p-4 sm:p-6 flex flex-col gap-2 sm:gap-2.5 items-end">
+                <div className="relative size-6 sm:size-9">
                   <div className="absolute inset-[8.333%] text-[#2b7fff]">
                     <TrendingIcon />
                   </div>
@@ -101,110 +101,110 @@ export default function StatsSection() {
                   </div>
                 </div>
                 <div className="w-full">
-                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>150+</div>
-                  <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
+                  <div className="text-[28px] sm:text-[40px] md:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>150+</div>
+                  <div className="h-[2.5px] sm:h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full">
-                  <div className="text-[18px] text-slate-50 font-['Poppins']">agency partners</div>
-                  <div className="text-[14px] text-zinc-500 font-['Roboto']">Active partnerships</div>
+                  <div className="text-[14px] sm:text-[16px] md:text-[18px] text-slate-50 font-['Poppins']">agency partners</div>
+                  <div className="text-[12px] sm:text-[14px] text-zinc-500 font-['Roboto']">Active partnerships</div>
                 </div>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="backdrop-blur rounded-[21px] relative grow min-w-60 border border-white/5">
-              <div className="p-6 flex flex-col gap-2.5 items-end">
-                <div className="relative size-9">
+            <div className="backdrop-blur rounded-[16px] sm:rounded-[21px] relative grow min-w-[140px] sm:min-w-60 border border-white/5">
+              <div className="p-4 sm:p-6 flex flex-col gap-2 sm:gap-2.5 items-end">
+                <div className="relative size-6 sm:size-9">
                   <div className="absolute inset-[25%] text-[#2b7fff]">
                     <ClockIcon />
                   </div>
                 </div>
                 <div className="w-full">
-                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>24/7</div>
-                  <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
+                  <div className="text-[28px] sm:text-[40px] md:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>24/7</div>
+                  <div className="h-[2.5px] sm:h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full">
-                  <div className="text-[18px] text-slate-50 font-['Poppins']">global support</div>
-                  <div className="text-[14px] text-zinc-500 font-['Roboto']">Always available</div>
+                  <div className="text-[14px] sm:text-[16px] md:text-[18px] text-slate-50 font-['Poppins']">global support</div>
+                  <div className="text-[12px] sm:text-[14px] text-zinc-500 font-['Roboto']">Always available</div>
                 </div>
               </div>
             </div>
 
             {/* Card 4 */}
-            <div className="backdrop-blur rounded-[21px] relative grow min-w-60 border border-white/5">
-              <div className="p-6 flex flex-col gap-2.5 items-end">
-                <div className="relative size-9">
+            <div className="backdrop-blur rounded-[16px] sm:rounded-[21px] relative grow min-w-[140px] sm:min-w-60 border border-white/5">
+              <div className="p-4 sm:p-6 flex flex-col gap-2 sm:gap-2.5 items-end">
+                <div className="relative size-6 sm:size-9">
                   <div className="absolute inset-[25%] text-[#00b8db]">
                     <ShieldIcon />
                   </div>
                 </div>
                 <div className="w-full">
-                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>100%</div>
-                  <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
+                  <div className="text-[28px] sm:text-[40px] md:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' }}>100%</div>
+                  <div className="h-[2.5px] sm:h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full">
-                  <div className="text-[18px] text-slate-50 font-['Poppins']">confidential</div>
-                  <div className="text-[14px] text-zinc-500 font-['Roboto']">Secure & private</div>
+                  <div className="text-[14px] sm:text-[16px] md:text-[18px] text-slate-50 font-['Poppins']">confidential</div>
+                  <div className="text-[12px] sm:text-[14px] text-zinc-500 font-['Roboto']">Secure & private</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="basis-0 flex flex-col gap-6 grow">
-          <div className="backdrop-blur-md bg-[rgba(30,58,138,0.15)] rounded-[21px] border border-white/20 p-6 shadow-lg shadow-blue-500/10">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="relative size-[18px] text-[#146ef6]">
+        <div className="basis-0 flex flex-col gap-4 sm:gap-6 grow">
+          <div className="backdrop-blur-md bg-[rgba(30,58,138,0.15)] rounded-[16px] sm:rounded-[21px] border border-white/20 p-4 sm:p-6 shadow-lg shadow-blue-500/10">
+            <div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              <div className="relative size-[14px] sm:size-[18px] text-[#146ef6]">
                 <TrendingIcon />
               </div>
-              <div className="text-[18px] text-slate-50 font-['Poppins']">Performance Metrics</div>
+              <div className="text-[14px] sm:text-[16px] md:text-[18px] text-slate-50 font-['Poppins']">Performance Metrics</div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
-                <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
-                  <div className="relative size-[18px] text-[#146ef6]">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[10px] sm:rounded-[14px] border border-white/10 px-2 py-2 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3">
+                <div className="size-[24px] sm:size-[35px] grid place-items-center border border-white/5 rounded-[6px] sm:rounded-[10.5px]">
+                  <div className="relative size-[12px] sm:size-[18px] text-[#146ef6]">
                     <CheckIcon />
                   </div>
                 </div>
                 <div>
-                  <div className="text-slate-50 text-[16px] font-['Roboto']">On-Time</div>
-                  <div className="text-zinc-500 text-[14px] font-['Roboto']">Delivery</div>
+                  <div className="text-slate-50 text-[12px] sm:text-[14px] md:text-[16px] font-['Roboto']">On-Time</div>
+                  <div className="text-zinc-500 text-[10px] sm:text-[12px] md:text-[14px] font-['Roboto']">Delivery</div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
-                <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
-                  <div className="relative size-[18px] text-[#00b8db]">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[10px] sm:rounded-[14px] border border-white/10 px-2 py-2 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3">
+                <div className="size-[24px] sm:size-[35px] grid place-items-center border border-white/5 rounded-[6px] sm:rounded-[10.5px]">
+                  <div className="relative size-[12px] sm:size-[18px] text-[#00b8db]">
                     <ShieldIcon />
                   </div>
                 </div>
                 <div>
-                  <div className="text-slate-50 text-[16px] font-['Roboto']">Secure</div>
-                  <div className="text-zinc-500 text-[14px] font-['Roboto']">Protected</div>
+                  <div className="text-slate-50 text-[12px] sm:text-[14px] md:text-[16px] font-['Roboto']">Secure</div>
+                  <div className="text-zinc-500 text-[10px] sm:text-[12px] md:text-[14px] font-['Roboto']">Protected</div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
-                <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
-                  <div className="relative size-[18px] text-[#2b7fff]">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[10px] sm:rounded-[14px] border border-white/10 px-2 py-2 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3">
+                <div className="size-[24px] sm:size-[35px] grid place-items-center border border-white/5 rounded-[6px] sm:rounded-[10.5px]">
+                  <div className="relative size-[12px] sm:size-[18px] text-[#2b7fff]">
                     <TrendingIcon />
                   </div>
                 </div>
                 <div>
-                  <div className="text-slate-50 text-[16px] font-['Roboto']">Fast</div>
-                  <div className="text-zinc-500 text-[14px] font-['Roboto']">Optimized</div>
+                  <div className="text-slate-50 text-[12px] sm:text-[14px] md:text-[16px] font-['Roboto']">Fast</div>
+                  <div className="text-zinc-500 text-[10px] sm:text-[12px] md:text-[14px] font-['Roboto']">Optimized</div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[14px] border border-white/10 px-4 py-3 flex items-center gap-3">
-                <div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]">
-                  <div className="relative size-[18px] text-[#146ef6]">
+              <div className="backdrop-blur-sm bg-[rgba(30,58,138,0.2)] rounded-[10px] sm:rounded-[14px] border border-white/10 px-2 py-2 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3">
+                <div className="size-[24px] sm:size-[35px] grid place-items-center border border-white/5 rounded-[6px] sm:rounded-[10.5px]">
+                  <div className="relative size-[12px] sm:size-[18px] text-[#146ef6]">
                     <UsersIcon />
                   </div>
                 </div>
                 <div>
-                  <div className="text-slate-50 text-[16px] font-['Roboto']">Expert</div>
-                  <div className="text-zinc-500 text-[14px] font-['Roboto']">Team</div>
+                  <div className="text-slate-50 text-[12px] sm:text-[14px] md:text-[16px] font-['Roboto']">Expert</div>
+                  <div className="text-zinc-500 text-[10px] sm:text-[12px] md:text-[14px] font-['Roboto']">Team</div>
                 </div>
               </div>
             </div>

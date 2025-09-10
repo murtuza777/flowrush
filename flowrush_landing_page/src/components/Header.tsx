@@ -216,10 +216,10 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
   );
 
   return (
-    <header className="sticky top-0 z-50 px-4 py-2 md:py-3">
+    <header className="sticky top-0 z-50 px-2 sm:px-4 py-1 sm:py-2 md:py-3">
       <div className="w-full max-w-6xl mx-auto">
-        <div className="backdrop-blur-md bg-[rgba(30,58,138,0.2)] border border-white/20 rounded-full shadow-lg shadow-blue-500/10 px-6 py-3 flex items-center justify-between">
-          <div className="h-[40px] w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${HEADER_ASSETS.logo}')` }} />
+        <div className="backdrop-blur-md bg-[rgba(30,58,138,0.2)] border border-white/20 rounded-full shadow-lg shadow-blue-500/10 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
+          <div className="h-[32px] w-[120px] sm:h-[40px] sm:w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${HEADER_ASSETS.logo}')` }} />
 
           {/* Navigation - Clean minimal design */}
           <nav className="hidden lg:flex items-center gap-8 text-white">
@@ -270,12 +270,13 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
             href="https://calendly.com/sahaj-baveja"
             target="_blank"
             rel="noreferrer"
-            className="bg-gradient-to-r from-blue-500 to-blue-900 hover:from-blue-400 hover:to-blue-800 text-white px-6 py-2 rounded-full transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-blue-500/20"
+            className="hidden sm:flex bg-gradient-to-r from-blue-500 to-blue-900 hover:from-blue-400 hover:to-blue-800 text-white px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-200 items-center gap-1 sm:gap-2 shadow-lg hover:shadow-blue-500/20 text-sm sm:text-base"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            Book a Meeting
+            <span className="hidden sm:inline">Book a Meeting</span>
+            <span className="sm:hidden">Book</span>
           </a>
         </div>
       </div>
