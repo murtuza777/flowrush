@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+	--color-primary: #1e40af;
+	--color-background: #0b1220;
+}
+
+@layer base {
+	:root {
+		--color-primary: 30 64 175; /* #1e40af */
+		--color-background: 11 18 32; /* #0b1220 */
+	}
+	html, body, #root {
+		height: 100%;
+	}
+	body {
+		@apply bg-[rgb(var(--color-background))] text-white antialiased font-sans;
+		background-image: radial-gradient(1200px_600px at 10% -10%, rgba(30,64,175,.35), transparent),
+			radial-gradient(800px_400px at 100% 0%, rgba(59,130,246,.25), transparent);
+	}
+	a {
+		@apply text-primary hover:underline;
+	}
+}
+
+@layer utilities {
+	.container-section { @apply mx-auto max-w-7xl px-4; }
+	.card { @apply rounded-xl border border-white/10 bg-white/5 shadow-lg shadow-black/30; }
+	.badge { @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide uppercase text-white/70; }
+}
