@@ -6,8 +6,17 @@ type HeaderFigmaProps = {
 };
 
 const logo = "http://localhost:3845/assets/bc279bc77c1bdeb307f551ea573887432a096828.png";
-const caretActive = "http://localhost:3845/assets/4eee31e02b8f8a810343ed63ce8f90764cacbafc.svg";
-const caret = "http://localhost:3845/assets/e5fc45282e47732391df61a2c6fb461d586bcb3e.svg";
+// Inline chevron icon to avoid external assets
+const ChevronDownIcon = ({ rotated }: { rotated: boolean }) => (
+  <svg
+    className={`w-3.5 h-3.5 transition-transform duration-200 ${rotated ? 'rotate-180' : ''}`}
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.168l3.71-2.94a.75.75 0 111.04 1.08l-4.24 3.36a.75.75 0 01-.94 0l-4.24-3.36a.75.75 0 01-.02-1.06z" clipRule="evenodd" />
+  </svg>
+);
 
 // Service-specific SVG icons (no emojis)
 const WebsiteIcon = () => (
@@ -207,7 +216,9 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
                 }`}
               >
                 <span className="whitespace-nowrap text-[15px]">Web Development</span>
-                <img src={activeDropdown === 'webdev' ? caretActive : caret} className="w-3.5 h-3.5" alt="" />
+                <span className={`${activeDropdown === 'webdev' ? 'text-white' : 'text-gray-400'} flex items-center`}>
+                  <ChevronDownIcon rotated={activeDropdown === 'webdev'} />
+                </span>
               </button>
               {activeDropdown === 'webdev' && (
                 <DropdownMenu category="Web Development" items={serviceCategories['Web Development']} />
@@ -223,7 +234,9 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
                 }`}
               >
                 <span className="whitespace-nowrap text-[15px]">Software & App</span>
-                <img src={activeDropdown === 'software' ? caretActive : caret} className="w-3.5 h-3.5" alt="" />
+                <span className={`${activeDropdown === 'software' ? 'text-white' : 'text-gray-400'} flex items-center`}>
+                  <ChevronDownIcon rotated={activeDropdown === 'software'} />
+                </span>
               </button>
               {activeDropdown === 'software' && (
                 <DropdownMenu category="Software & App" items={serviceCategories['Software & App']} />
@@ -239,7 +252,9 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
                 }`}
               >
                 <span className="whitespace-nowrap text-[15px]">Cloud & Tech</span>
-                <img src={activeDropdown === 'cloud' ? caretActive : caret} className="w-3.5 h-3.5" alt="" />
+                <span className={`${activeDropdown === 'cloud' ? 'text-white' : 'text-gray-400'} flex items-center`}>
+                  <ChevronDownIcon rotated={activeDropdown === 'cloud'} />
+                </span>
               </button>
               {activeDropdown === 'cloud' && (
                 <DropdownMenu category="Cloud & Tech" items={serviceCategories['Cloud & Tech']} />
@@ -255,7 +270,9 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
                 }`}
               >
                 <span className="whitespace-nowrap text-[15px]">AI</span>
-                <img src={activeDropdown === 'ai' ? caretActive : caret} className="w-3.5 h-3.5" alt="" />
+                <span className={`${activeDropdown === 'ai' ? 'text-white' : 'text-gray-400'} flex items-center`}>
+                  <ChevronDownIcon rotated={activeDropdown === 'ai'} />
+                </span>
               </button>
               {activeDropdown === 'ai' && (
                 <DropdownMenu category="AI" items={serviceCategories['AI']} />
@@ -271,7 +288,9 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
                 }`}
               >
                 <span className="whitespace-nowrap text-[15px]">Staff Augmentation</span>
-                <img src={activeDropdown === 'staff' ? caretActive : caret} className="w-3.5 h-3.5" alt="" />
+                <span className={`${activeDropdown === 'staff' ? 'text-white' : 'text-gray-400'} flex items-center`}>
+                  <ChevronDownIcon rotated={activeDropdown === 'staff'} />
+                </span>
               </button>
               {activeDropdown === 'staff' && (
                 <DropdownMenu category="Staff Augmentation" items={serviceCategories['Staff Augmentation']} />
