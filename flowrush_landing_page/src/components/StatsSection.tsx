@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Simple SVG icons for deployment compatibility
 const CheckIcon = () => (

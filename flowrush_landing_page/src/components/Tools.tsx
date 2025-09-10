@@ -146,8 +146,10 @@ export default function Tools() {
             >
               {/* Category Icon */}
               <div className="size-[17.5px] relative">
-                {category.icon.map((iconSrc, iconIndex) => (
-                  <img key={iconIndex} alt="" className="absolute inset-0 size-full" src={iconSrc} />
+                {category.icon.map((IconComponent, iconIndex) => (
+                  <div key={iconIndex} className="absolute inset-0 size-full">
+                    <IconComponent />
+                  </div>
                 ))}
               </div>
               

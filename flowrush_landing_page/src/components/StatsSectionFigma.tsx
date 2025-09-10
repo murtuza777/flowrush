@@ -13,18 +13,6 @@ const StarIcon = () => (
   </svg>
 );
 
-const TrendingIcon = () => (
-  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-  </svg>
-);
-
-const UsersIcon = () => (
-  <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
-
 export default function StatsSectionFigma() {
   return (
     <div className="bg-[#0a0a0f] box-border content-stretch flex flex-col gap-[40px] md:gap-[60px] items-start justify-start px-4 sm:px-8 lg:px-20 xl:px-[180px] py-16 md:py-28 relative w-full [&_img]:block [&_img]:w-full [&_img]:h-full [&_img]:object-contain">
@@ -52,9 +40,9 @@ export default function StatsSectionFigma() {
             <div className="backdrop-blur rounded-[21px] relative grow min-w-60">
               <div className="p-6 flex flex-col gap-2.5 items-end">
                 <div className="relative size-9">
-                  <div className="absolute inset-[8.333%]"><img alt="" className="w-full h-full" src={img2} /></div>
-                  <div className="absolute inset-[8.33%_33.33%]"><img alt="" className="w-full h-full" src={img3} /></div>
-                  <div className="absolute bottom-1/2 left-[8.33%] right-[8.33%] top-1/2"><img alt="" className="w-full h-full" src={img4} /></div>
+                  <div className="absolute inset-[8.333%] bg-blue-500 rounded"></div>
+                  <div className="absolute inset-[8.33%_33.33%] bg-blue-400 rounded"></div>
+                  <div className="absolute bottom-1/2 left-[8.33%] right-[8.33%] top-1/2 bg-blue-300 rounded"></div>
                 </div>
                 <div className="w-full">
                   <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>25+</div>
@@ -67,7 +55,7 @@ export default function StatsSectionFigma() {
             {/* Card 3 */}
             <div className="backdrop-blur rounded-[21px] relative grow min-w-60">
               <div className="p-6 flex flex-col gap-2.5 items-end">
-                <div className="relative size-9"><div className="absolute inset-[53.71%_29.17%_8.34%_29.18%]"><img alt="" className="w-full h-full" src={img5} /></div><div className="absolute bottom-[41.67%] left-1/4 right-1/4 top-[8.33%]"><img alt="" className="w-full h-full" src={img6} /></div></div>
+                <div className="relative size-9"><div className="absolute inset-[53.71%_29.17%_8.34%_29.18%] bg-blue-500 rounded"></div><div className="absolute bottom-[41.67%] left-1/4 right-1/4 top-[8.33%] bg-blue-400 rounded"></div></div>
                 <div className="w-full">
                   <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>8+</div>
                   <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
@@ -80,10 +68,10 @@ export default function StatsSectionFigma() {
             <div className="backdrop-blur rounded-[21px] relative grow min-w-60">
               <div className="p-6 flex flex-col gap-2.5 items-end">
                 <div className="relative size-9">
-                  <div className="absolute inset-[62.5%_33.33%_12.5%_8.33%]"><img alt="" className="w-full h-full" src={img7} /></div>
-                  <div className="absolute inset-[13.03%_20.85%_54.7%_66.67%]"><img alt="" className="w-full h-full" src={img8} /></div>
-                  <div className="absolute inset-[63.04%_8.33%_12.5%_79.17%]"><img alt="" className="w-full h-full" src={img9} /></div>
-                  <div className="absolute inset-[12.5%_45.83%_54.17%_20.83%]"><img alt="" className="w-full h-full" src={img10} /></div>
+                  <div className="absolute inset-[62.5%_33.33%_12.5%_8.33%] bg-blue-500 rounded"></div>
+                  <div className="absolute inset-[13.03%_20.85%_54.7%_66.67%] bg-blue-400 rounded"></div>
+                  <div className="absolute inset-[63.04%_8.33%_12.5%_79.17%] bg-blue-300 rounded"></div>
+                  <div className="absolute inset-[12.5%_45.83%_54.17%_20.83%] bg-blue-200 rounded"></div>
                 </div>
                 <div className="w-full">
                   <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>150+</div>
@@ -104,7 +92,7 @@ export default function StatsSectionFigma() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="size-[49px] rounded-[14.5px] grid place-items-center">
-                      <div className="relative size-[24.5px]"><div className="absolute inset-[8.333%]"><img alt="" className="w-full h-full" src={img11} /></div><div className="absolute inset-1/4"><img alt="" className="w-full h-full" src={img12} /></div><div className="absolute inset-[41.667%]"><img alt="" className="w-full h-full" src={img13} /></div></div>
+                      <div className="relative size-[24.5px]"><div className="absolute inset-[8.333%] bg-blue-500 rounded"></div><div className="absolute inset-1/4 bg-blue-400 rounded"></div><div className="absolute inset-[41.667%] bg-blue-300 rounded"></div></div>
                     </div>
                     <div>
                       <div className="text-[18px] text-slate-50 font-['Poppins']">Development Dashboard</div>
@@ -117,26 +105,26 @@ export default function StatsSectionFigma() {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                   <div className="backdrop-blur rounded-[21px] border border-white/5 p-6 text-center">
                     <div className="h-12 grid place-items-center">
-                      <div className="relative size-12"><div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4"><img alt="" src={img14} /></div><div className="absolute bottom-1/4 left-[8.33%] right-[66.67%] top-1/4"><img alt="" src={img15} /></div></div>
+                      <div className="relative size-12"><div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4 bg-blue-500 rounded"></div><div className="absolute bottom-1/4 left-[8.33%] right-[66.67%] top-1/4 bg-blue-400 rounded"></div></div>
                     </div>
                     <div className="text-white text-[14px] font-['Roboto']">Web Dev</div>
                   </div>
                   <div className="backdrop-blur rounded-[21px] border border-white/5 p-6 text-center">
                     <div className="h-12 grid place-items-center">
-                      <div className="relative size-12"><div className="absolute inset-[8.33%_20.83%]"><img alt="" src={img16} /></div><div className="absolute bottom-1/4 left-1/2 right-[49.96%] top-3/4"><img alt="" src={img17} /></div></div>
+                      <div className="relative size-12"><div className="absolute inset-[8.33%_20.83%] bg-blue-500 rounded"></div><div className="absolute bottom-1/4 left-1/2 right-[49.96%] top-3/4 bg-blue-400 rounded"></div></div>
                     </div>
                     <div className="text-white text-[14px] font-['Roboto']">Mobile</div>
                   </div>
                   <div className="backdrop-blur rounded-[21px] border border-white/5 p-6 text-center">
                     <div className="h-12 grid place-items-center">
-                      <div className="relative size-12"><div className="absolute inset-[8.33%_12.5%_66.67%_12.5%]"><img alt="" src={img18} /></div><div className="absolute inset-[20.83%_12.5%_8.33%_12.5%]"><img alt="" src={img19} /></div><div className="absolute bottom-[37.5%] left-[12.5%] right-[12.5%] top-1/2"><img alt="" src={img20} /></div></div>
+                      <div className="relative size-12"><div className="absolute inset-[8.33%_12.5%_66.67%_12.5%] bg-blue-500 rounded"></div><div className="absolute inset-[20.83%_12.5%_8.33%_12.5%] bg-blue-400 rounded"></div><div className="absolute bottom-[37.5%] left-[12.5%] right-[12.5%] top-1/2 bg-blue-300 rounded"></div></div>
                     </div>
                     <div className="text-white text-[14px] font-['Roboto']">Backend</div>
                   </div>
                 </div>
 
                 <div className="mt-6">
-                  <div className="flex items-center gap-2 mb-3"><div className="relative size-[17.5px]"><div className="absolute inset-[29.17%_8.33%_45.83%_66.67%]"><img alt="" className="w-full h-full" src={img21} /></div><div className="absolute inset-[29.17%_8.33%]"><img alt="" className="w-full h-full" src={img22} /></div></div><div className="text-[18px] text-slate-50 font-['Poppins']">Performance Metrics</div></div>
+                  <div className="flex items-center gap-2 mb-3"><div className="relative size-[17.5px]"><div className="absolute inset-[29.17%_8.33%_45.83%_66.67%] bg-blue-500 rounded"></div><div className="absolute inset-[29.17%_8.33%] bg-blue-400 rounded"></div></div><div className="text-[18px] text-slate-50 font-['Poppins']">Performance Metrics</div></div>
                   {[
                     { label: 'Client Satisfaction', width: '98%' },
                     { label: 'On-Time Delivery', width: '95%' },
@@ -151,11 +139,11 @@ export default function StatsSectionFigma() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-6 py-3 flex items-center gap-3"><div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]"><div className="relative size-[17.5px]"><div className="absolute inset-[8.33%_16.67%_8.32%_16.67%]"><img alt="" src={img23} /></div></div></div><div><div className="text-slate-50 text-[16px] font-['Roboto']">Secure</div><div className="text-zinc-500 text-[14px] font-['Roboto']">Protected</div></div></div>
-              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-6 py-3 flex items-center gap-3"><div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]"><div className="relative size-[17.5px]"><div className="absolute inset-[8.32%_12.49%]"><img alt="" src={img24} /></div></div></div><div><div className="text-slate-50 text-[16px] font-['Roboto']">Fast</div><div className="text-zinc-500 text-[14px] font-['Roboto']">Optimized</div></div></div>
+              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-6 py-3 flex items-center gap-3"><div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]"><div className="relative size-[17.5px]"><div className="absolute inset-[8.33%_16.67%_8.32%_16.67%] bg-blue-500 rounded"></div></div></div><div><div className="text-slate-50 text-[16px] font-['Roboto']">Secure</div><div className="text-zinc-500 text-[14px] font-['Roboto']">Protected</div></div></div>
+              <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-[14px] border border-white/5 px-6 py-3 flex items-center gap-3"><div className="size-[35px] grid place-items-center border border-white/5 rounded-[10.5px]"><div className="relative size-[17.5px]"><div className="absolute inset-[8.32%_12.49%] bg-blue-400 rounded"></div></div></div><div><div className="text-slate-50 text-[16px] font-['Roboto']">Fast</div><div className="text-zinc-500 text-[14px] font-['Roboto']">Optimized</div></div></div>
             </div>
           </div>
-          <div className="absolute -bottom-6 -left-6 rotate-[4.383deg]"><div className="backdrop-blur-sm bg-[rgba(26,26,36,0.5)] rounded-[14px] size-[58.66px] grid place-items-center border-2 border-[rgba(99,102,241,0.4)]"><div className="relative size-[29.064px]"><div className="absolute inset-[8.33%_8.33%_12.2%_8.33%]"><img alt="" className="w-full h-full" src={img25} /></div></div></div></div>
+          <div className="absolute -bottom-6 -left-6 rotate-[4.383deg]"><div className="backdrop-blur-sm bg-[rgba(26,26,36,0.5)] rounded-[14px] size-[58.66px] grid place-items-center border-2 border-[rgba(99,102,241,0.4)]"><div className="relative size-[29.064px]"><div className="absolute inset-[8.33%_8.33%_12.2%_8.33%] bg-blue-500 rounded"></div></div></div></div>
         </div>
       </div>
     </div>
