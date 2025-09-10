@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-export default function ContactForm() {
+type ContactFormProps = {
+  onClose?: () => void;
+};
+
+export default function ContactForm({ onClose }: ContactFormProps) {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
   return (
@@ -34,7 +38,7 @@ export default function ContactForm() {
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
       </div>
-      <button type="button" className="w-full rounded-md bg-primary px-4 py-2 text-white hover:bg-primary/90">Connect Now</button>
+      <button type="button" onClick={onClose} className="w-full rounded-md bg-primary px-4 py-2 text-white hover:bg-primary/90">Connect Now</button>
     </form>
   );
 }

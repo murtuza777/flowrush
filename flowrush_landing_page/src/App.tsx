@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import HeaderFigma from './components/HeaderFigma';
 import HeroFigma from './components/HeroFigma';
 import Marquee from './components/Marquee';
@@ -50,7 +50,7 @@ function App() {
 
       {/* Modals */}
       <Modal 
-        isOpen={isContactModalOpen} 
+        open={isContactModalOpen} 
         onClose={() => setIsContactModalOpen(false)}
         title="Get in Touch"
       >
@@ -58,7 +58,7 @@ function App() {
       </Modal>
 
       <Modal 
-        isOpen={isAboutModalOpen} 
+        open={isAboutModalOpen} 
         onClose={() => setIsAboutModalOpen(false)}
         title="About Flowrush Technologies"
       >
@@ -73,7 +73,7 @@ function App() {
       </Modal>
 
       <Modal 
-        isOpen={isPrivacyModalOpen} 
+        open={isPrivacyModalOpen} 
         onClose={() => setIsPrivacyModalOpen(false)}
         title="Privacy Policy"
       >
@@ -93,7 +93,7 @@ function App() {
       </Modal>
 
       <Modal 
-        isOpen={isTermsModalOpen} 
+        open={isTermsModalOpen} 
         onClose={() => setIsTermsModalOpen(false)}
         title="Terms & Conditions"
       >

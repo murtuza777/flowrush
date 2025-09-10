@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 
 // Figma-exported icons
 const img = "http://localhost:3845/assets/719f29982fb390d8dcf85e9b028acce614baabd7.svg";

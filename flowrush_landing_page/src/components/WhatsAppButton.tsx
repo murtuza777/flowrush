@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -86,7 +86,7 @@ export default function WhatsAppButton() {
       </div>
 
       {/* Custom Styles */}
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% {
             transform: translateY(0px);

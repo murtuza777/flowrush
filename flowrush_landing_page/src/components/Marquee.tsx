@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 
 // All individual services from header dropdowns
 const services = [
@@ -86,7 +86,7 @@ export default function Marquee() {
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0f] to-transparent pointer-events-none z-10" />
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes marquee {
           0% {
             transform: translateX(0%);

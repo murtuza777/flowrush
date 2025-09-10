@@ -1,5 +1,5 @@
 
-import React from 'react';
+ 
 import { HERO_ASSETS } from '../assets';
 
 export default function HeroFigma() {

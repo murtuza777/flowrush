@@ -122,7 +122,7 @@ export const getAssetUrl = (path: string): string => {
 };
 
 // Fallback function for missing assets
-export const getAssetWithFallback = (path: string, fallback: string): string => {
+export const getAssetWithFallback = (path: string, _fallback: string): string => {
   // In production, you might want to implement actual asset checking
   return `${BASE_URL}/${path}`;
 };

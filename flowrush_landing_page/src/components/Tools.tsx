@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Technology images from Figma assets
 const reactLogo = "http://localhost:3845/assets/eb38569d77304f55bdd7ce9ce190337c2b9f40ed.png";
-const nextjsLogo = "http://localhost:3845/assets/0d53d1cb64392697d4a4a8c31ed86f1bade1e6bf.svg";
-const vueLogo = "http://localhost:3845/assets/44af36eeaeb6eaf404b7d46956044f69dd85c5a2.svg";
-const angularLogo = "http://localhost:3845/assets/281e3df292b6cddc63c0403c09267ae96bda45ee.svg";
-const nodejsLogo = "http://localhost:3845/assets/0b4068c00139acdb918a725667afff35216773d4.svg";
-const laravelLogo = "http://localhost:3845/assets/8bb39a09be7da7a4dbc5b24e7a4387fad8f786f1.svg";
-const djangoLogo = "http://localhost:3845/assets/3b7307cc3b07d82237ad6497d1d3e3a21462a4b5.svg";
-const typescriptLogo = "http://localhost:3845/assets/f4ff5c8f207db343d7154bd4c8855c7ad23f02dd.svg";
+// Removed unused logo constants to satisfy TS6133
 
 // Category icons
 const webDevIcon1 = "http://localhost:3845/assets/fa441c9148a858390b6118ce70ff208af23ba1be.svg";
@@ -118,7 +112,7 @@ export default function Tools() {
 
         {/* Category Filter Buttons */}
         <div className="flex flex-wrap gap-3.5 items-center justify-center mb-8">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <button
               key={category.name}
               onClick={() => setActiveCategory(category.name)}
@@ -145,7 +139,7 @@ export default function Tools() {
 
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
-          {technologiesByCategory[activeCategory as keyof typeof technologiesByCategory]?.map((tech, index) => (
+          {technologiesByCategory[activeCategory as keyof typeof technologiesByCategory]?.map((tech) => (
             <div
               key={tech.name}
               className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] border border-[rgba(255,255,255,0.05)] rounded-[14px] shadow-[0px_0px_24px_0px_rgba(99,102,241,0.12)] p-8 flex flex-col gap-3 items-center w-full hover:border-[#146ef6]/30 transition-all duration-300 hover:scale-105"

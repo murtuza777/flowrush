@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import WhatsAppButton from './WhatsAppButton';
 
 type FooterProps = {

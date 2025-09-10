@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 
 // Figma-exported asset
 const img15Checked = "http://localhost:3845/assets/e89417c1e8ec39b0bfdda54c0e50af7ee044899b.svg";
