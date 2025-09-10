@@ -95,24 +95,24 @@ export default function ProcessSteps() {
   }, [steps.length]);
 
   return (
-    <section className="bg-[#0a0a0f] py-[84px] px-4 sm:px-8 lg:px-20 xl:px-[180px]">
-      <div className="max-w-[1552px] mx-auto flex gap-20 items-center">
+    <section className="bg-[#0a0a0f] py-[60px] md:py-[84px] px-4 sm:px-8 lg:px-20 xl:px-[180px]">
+      <div className="max-w-[1552px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-20 items-stretch lg:items-center">
         {/* Left side - Content */}
         <div className="flex-1 max-w-[759px]">
-          <h2 className="font-['Poppins'] font-bold text-[64px] leading-[1.2] tracking-[-0.32px] mb-8">
+          <h2 className="font-['Poppins'] font-bold text-[34px] sm:text-[48px] lg:text-[64px] leading-[1.2] tracking-[-0.32px] mb-4 md:mb-8">
             <span className="text-[#146ef6]">5-Step Process to Keep</span>
             <br />
             <span className="text-slate-50">Your Clients Happy</span>
           </h2>
           
-          <p className="text-[16px] text-zinc-500 font-['Roboto'] leading-[1.6] max-w-[600px]">
+          <p className="text-[15px] md:text-[16px] text-zinc-500 font-['Roboto'] leading-[1.7] max-w-[600px]">
             Our streamlined methodology ensures every project delivers exceptional results that exceed expectations
           </p>
         </div>
 
         {/* Right side - Process Steps Carousel */}
         <div className="flex-1 max-w-[730px]">
-          <div className="relative h-[360px] overflow-hidden rounded-[24px]">
+          <div className="relative h-[420px] sm:h-[360px] overflow-hidden rounded-[24px]">
             {/* Steps container */}
             <div 
               className="flex transition-transform duration-500 ease-in-out h-full"

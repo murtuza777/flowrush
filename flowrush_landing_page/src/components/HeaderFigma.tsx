@@ -117,6 +117,7 @@ const SEOIcon = () => (
 
 export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleDropdown = (dropdownName: string) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
@@ -202,8 +203,8 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
   return (
     <header className="sticky top-0 z-50">
       <div className="backdrop-blur-[2px] backdrop-filter bg-[rgba(26,26,36,0.8)] border-b border-white/5">
-        <div className="w-full max-w-[1440px] mx-auto py-5 md:py-6 flex items-center justify-between px-6 md:px-8 lg:px-12 xl:px-16 relative">
-          <div className="h-[51px] w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${logo}')` }} />
+        <div className="w-full max-w-[1440px] mx-auto py-4 md:py-6 flex items-center justify-between px-4 md:px-8 lg:px-12 xl:px-16 relative">
+          <div className="h-[40px] w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${logo}')` }} />
 
           {/* Navigation - Properly spaced for Figma design */}
           <nav className="hidden lg:flex items-center gap-1 text-[16px] font-['Roboto'] leading-[1.6]">
@@ -315,10 +316,20 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
           </nav>
 
           {/* Mobile menu button */}
-          <button className="lg:hidden p-2 text-gray-300 hover:text-white">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMobileOpen((v) => !v)}
+            className="lg:hidden p-2 text-gray-300 hover:text-white"
+          >
+            {mobileOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
 
           {/* Book a Meeting Button */}
@@ -333,6 +344,101 @@ export default function HeaderFigma({ onOpenAbout, onOpenContact }: HeaderFigmaP
         </div>
       </div>
       
+      {/* Mobile slide-down menu */}
+      {mobileOpen && (
+        <div className="lg:hidden bg-[rgba(26,26,36,0.95)] border-b border-white/5">
+          <div className="max-w-[1440px] mx-auto px-4 py-4 space-y-2">
+            <details className="group">
+              <summary className="flex items-center justify-between text-gray-200 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer">
+                <span>Web Development</span>
+                <ChevronDownIcon rotated={false} />
+              </summary>
+              <div className="mt-2 pl-4 space-y-1">
+                {serviceCategories['Web Development'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-gray-300 px-3 py-2 rounded hover:bg-white/5">
+                    <span className="text-[#146ef6]">{item.icon}</span>
+                    <span className="text-sm">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            <details className="group">
+              <summary className="flex items-center justify-between text-gray-200 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer">
+                <span>Software & App</span>
+                <ChevronDownIcon rotated={false} />
+              </summary>
+              <div className="mt-2 pl-4 space-y-1">
+                {serviceCategories['Software & App'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-gray-300 px-3 py-2 rounded hover:bg-white/5">
+                    <span className="text-[#146ef6]">{item.icon}</span>
+                    <span className="text-sm">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            <details className="group">
+              <summary className="flex items-center justify-between text-gray-200 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer">
+                <span>Cloud & Tech</span>
+                <ChevronDownIcon rotated={false} />
+              </summary>
+              <div className="mt-2 pl-4 space-y-1">
+                {serviceCategories['Cloud & Tech'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-gray-300 px-3 py-2 rounded hover:bg-white/5">
+                    <span className="text-[#146ef6]">{item.icon}</span>
+                    <span className="text-sm">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            <details className="group">
+              <summary className="flex items-center justify-between text-gray-200 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer">
+                <span>AI</span>
+                <ChevronDownIcon rotated={false} />
+              </summary>
+              <div className="mt-2 pl-4 space-y-1">
+                {serviceCategories['AI'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-gray-300 px-3 py-2 rounded hover:bg-white/5">
+                    <span className="text-[#146ef6]">{item.icon}</span>
+                    <span className="text-sm">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            <details className="group">
+              <summary className="flex items-center justify-between text-gray-200 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer">
+                <span>Staff Augmentation</span>
+                <ChevronDownIcon rotated={false} />
+              </summary>
+              <div className="mt-2 pl-4 space-y-1">
+                {serviceCategories['Staff Augmentation'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-gray-300 px-3 py-2 rounded hover:bg-white/5">
+                    <span className="text-[#146ef6]">{item.icon}</span>
+                    <span className="text-sm">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <button onClick={onOpenAbout} className="w-full px-4 py-2 rounded-md bg-white/5 text-gray-200 hover:bg-white/10">About</button>
+              <button onClick={onOpenContact} className="w-full px-4 py-2 rounded-md bg-[#146ef6] text-white hover:bg-[#1257d3]">Contact</button>
+              <a
+                href="https://calendly.com/sahaj-baveja"
+                target="_blank"
+                rel="noreferrer"
+                className="col-span-2 rounded-md bg-gradient-to-r from-[#146ef6] to-[#2b7fff] text-white px-4 py-2.5 text-center"
+              >
+                Book a Meeting
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Overlay to close dropdowns when clicking outside */}
       {activeDropdown && (
         <div 

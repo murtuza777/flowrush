@@ -29,21 +29,21 @@ const img25 = "http://localhost:3845/assets/9e1a466d826f070a46a2fba742aba818e61c
 
 export default function StatsSectionFigma() {
   return (
-    <div className="bg-[#0a0a0f] box-border content-stretch flex flex-col gap-[60px] items-start justify-start px-[180px] py-28 relative w-full [&_img]:block [&_img]:w-full [&_img]:h-full [&_img]:object-contain">
+    <div className="bg-[#0a0a0f] box-border content-stretch flex flex-col gap-[40px] md:gap-[60px] items-start justify-start px-4 sm:px-8 lg:px-20 xl:px-[180px] py-16 md:py-28 relative w-full [&_img]:block [&_img]:w-full [&_img]:h-full [&_img]:object-contain">
       <div className="content-stretch flex flex-col gap-3 items-center justify-start w-full">
         <div className="bg-[rgba(99,102,241,0.1)] box-border inline-flex items-start justify-center px-[15px] py-2 rounded-[99999999px]"><span className="text-indigo-500 text-[14px] leading-[1.6] font-['Roboto']">PROVEN RESULTS</span></div>
-        <div className="text-center font-['Poppins'] font-bold leading-[1.2] tracking-[-0.32px] text-[64px]"><p className="text-[#146ef6] mb-0">White-Label Development</p><p className="text-slate-50">You Can Rely On</p></div>
-        <p className="text-zinc-500 text-[16px] font-['Roboto'] leading-[1.6] text-center max-w-[980px]">Focus on growing your business while we handle the technical execution behind the scenes. Our white-label development services are designed for agencies and consultants who need a dependable partner to deliver high- quality web, software, and app solutions—on time, on brand, and under strict confidentiality.</p>
+        <div className="text-center font-['Poppins'] font-bold leading-[1.2] tracking-[-0.32px] text-[32px] sm:text-[48px] lg:text-[64px]"><p className="text-[#146ef6] mb-0">White-Label Development</p><p className="text-slate-50">You Can Rely On</p></div>
+        <p className="text-zinc-500 text-[15px] md:text-[16px] font-['Roboto'] leading-[1.7] text-center max-w-[980px] px-2">Focus on growing your business while we handle the technical execution behind the scenes. Our white-label development services are designed for agencies and consultants who need a dependable partner to deliver high- quality web, software, and app solutions—on time, on brand, and under strict confidentiality.</p>
       </div>
-      <div className="content-stretch flex gap-20 items-start justify-start w-full">
+      <div className="content-stretch flex flex-col lg:flex-row gap-10 lg:gap-20 items-stretch justify-start w-full">
         <div className="basis-0 flex flex-col gap-7 grow">
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Card 1 */}
             <div className="backdrop-blur rounded-[21px] relative grow min-w-60">
               <div className="p-6 flex flex-col gap-2.5 items-end">
                 <div className="relative size-9"><div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4"><img alt="" className="w-full h-full" src={img} /></div><div className="absolute bottom-1/4 left-[8.33%] right-[66.67%] top-1/4"><img alt="" className="w-full h-full" src={img1} /></div></div>
                 <div className="w-full">
-                  <div className="text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>2,000+</div>
+                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>2,000+</div>
                   <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full"><div className="text-[18px] text-slate-50 font-['Poppins']">projects delivered</div><div className="text-[14px] text-zinc-500 font-['Roboto']">Successfully completed</div></div>
@@ -59,7 +59,7 @@ export default function StatsSectionFigma() {
                   <div className="absolute bottom-1/2 left-[8.33%] right-[8.33%] top-1/2"><img alt="" className="w-full h-full" src={img4} /></div>
                 </div>
                 <div className="w-full">
-                  <div className="text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>25+</div>
+                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>25+</div>
                   <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full"><div className="text-[18px] text-slate-50 font-['Poppins']">countries served</div><div className="text-[14px] text-zinc-500 font-['Roboto']">Global presence</div></div>
@@ -71,7 +71,7 @@ export default function StatsSectionFigma() {
               <div className="p-6 flex flex-col gap-2.5 items-end">
                 <div className="relative size-9"><div className="absolute inset-[53.71%_29.17%_8.34%_29.18%]"><img alt="" className="w-full h-full" src={img5} /></div><div className="absolute bottom-[41.67%] left-1/4 right-1/4 top-[8.33%]"><img alt="" className="w-full h-full" src={img6} /></div></div>
                 <div className="w-full">
-                  <div className="text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>8+</div>
+                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>8+</div>
                   <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full"><div className="text-[18px] text-slate-50 font-['Poppins']">years of expertise</div><div className="text-[14px] text-zinc-500 font-['Roboto']">Industry experience</div></div>
@@ -88,7 +88,7 @@ export default function StatsSectionFigma() {
                   <div className="absolute inset-[12.5%_45.83%_54.17%_20.83%]"><img alt="" className="w-full h-full" src={img10} /></div>
                 </div>
                 <div className="w-full">
-                  <div className="text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>150+</div>
+                  <div className="text-[40px] sm:text-[56px] lg:text-[64px] font-bold bg-clip-text bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" style={{ WebkitTextFillColor: 'transparent' } as React.CSSProperties}>150+</div>
                   <div className="h-[3.5px] w-full rounded-full bg-gradient-to-r from-[#2b7fff] to-[#00b8db]" />
                 </div>
                 <div className="w-full"><div className="text-[18px] text-slate-50 font-['Poppins']">agency partnerships</div><div className="text-[14px] text-zinc-500 font-['Roboto']">Trusted relationships</div></div>
@@ -96,10 +96,10 @@ export default function StatsSectionFigma() {
               <div className="absolute inset-0 rounded-[21px] border border-white/5" aria-hidden />
             </div>
           </div>
-          <div className="mt-6 w-[140px] h-[36px] rounded-[8px] inline-flex items-center justify-center bg-[#146ef6] hover:bg-[#125adb] transition-colors"><div className="text-white text-[14px] font-['Poppins'] font-semibold leading-none">Connect Now</div></div>
+          <div className="mt-2 sm:mt-4 w-full sm:w-[200px] h-[40px] rounded-[8px] inline-flex items-center justify-center bg-[#146ef6] hover:bg-[#125adb] transition-colors"><div className="text-white text-[14px] font-['Poppins'] font-semibold leading-none">Connect Now</div></div>
         </div>
 
-        <div className="basis-0 flex-1 flex flex-col">
+        <div className="basis-0 flex-1 flex flex-col mt-8 lg:mt-0">
           <div className="flex flex-col gap-[18px] isolate">
             <div className="backdrop-blur-md relative rounded-[21px] w-full z-[2] border border-white/5 shadow-[0_0_40px_rgba(99,102,241,0.15)]">
               <div className="p-6">
@@ -116,7 +116,7 @@ export default function StatsSectionFigma() {
                   <div className="flex items-center gap-2"><div className="size-[10.5px] rounded-full bg-[#00c950]" /><div className="text-[14px] text-zinc-500 font-['Roboto']">Live</div></div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 mt-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                   <div className="backdrop-blur rounded-[21px] border border-white/5 p-6 text-center">
                     <div className="h-12 grid place-items-center">
                       <div className="relative size-12"><div className="absolute bottom-1/4 left-[66.67%] right-[8.33%] top-1/4"><img alt="" src={img14} /></div><div className="absolute bottom-1/4 left-[8.33%] right-[66.67%] top-1/4"><img alt="" src={img15} /></div></div>

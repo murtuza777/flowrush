@@ -4,7 +4,7 @@ import { HERO_ASSETS } from '../assets';
 
 export default function HeroFigma() {
   return (
-    <section className="relative bg-[#0a0118] overflow-hidden min-h-screen flex items-center">
+    <section className="relative bg-[#0a0118] overflow-hidden min-h-[70vh] md:min-h-screen flex items-center">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0118] via-[#1a1a24] to-[#0a0118]" />
       
@@ -21,14 +21,14 @@ export default function HeroFigma() {
       </div>
 
       {/* Full width container - no side spacing */}
-      <div className="w-full py-16 md:py-24 relative z-10">
+      <div className="w-full py-12 md:py-24 relative z-10">
         {/* Content and iPhone side by side layout */}
-        <div className="flex items-center justify-between px-6 md:px-12 lg:px-16 xl:px-20 max-w-[1400px] mx-auto">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-8 items-center justify-between px-4 md:px-12 lg:px-16 xl:px-20 max-w-[1400px] mx-auto">
           
           {/* Left side - Content */}
-          <div className="flex-1 max-w-[700px]">
+          <div className="flex-1 w-full max-w-[700px]">
             {/* Main heading */}
-            <h1 className="font-['Poppins'] font-bold text-[32px] md:text-[56px] lg:text-[64px] leading-[1.1] tracking-[-0.8px] text-left mb-6">
+            <h1 className="font-['Poppins'] font-bold text-[30px] sm:text-[40px] md:text-[56px] lg:text-[64px] leading-[1.15] tracking-[-0.8px] text-left mb-4 md:mb-6">
               <span className="text-[#146ef6]">White Label Global Experts in Web,</span>
               <br />
               <span className="text-slate-50 relative">
@@ -38,18 +38,18 @@ export default function HeroFigma() {
             </h1>
 
             {/* Description */}
-            <p className="text-[16px] md:text-[18px] text-white/70 font-['Roboto'] leading-[1.6] mb-8 max-w-[600px]">
+            <p className="text-[15px] md:text-[18px] text-white/70 font-['Roboto'] leading-[1.7] mb-6 md:mb-8 max-w-[600px]">
               We provide comprehensive global white-label technology solutions, working closely with a curated selection of agencies to serve as their trusted strategic technology partners. Our aim is to enhance their offerings and drive innovation in their projects.
             </p>
 
             {/* CTA Button */}
-            <button className="group relative bg-[#146ef6] hover:bg-[#1257d3] text-white px-8 py-3 rounded-[8px] font-['Poppins'] font-semibold text-[16px] md:text-[18px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(20,110,246,0.4)] overflow-hidden mb-8">
+            <button className="group relative bg-[#146ef6] hover:bg-[#1257d3] text-white px-6 md:px-8 py-3 rounded-[8px] font-['Poppins'] font-semibold text-[15px] md:text-[18px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(20,110,246,0.4)] overflow-hidden mb-6 md:mb-8">
               <span className="relative z-10">Connect with Team</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             </button>
 
             {/* Bottom text */}
-            <p className="text-[14px] md:text-[16px] text-white/60 font-['Roboto'] leading-[1.5] max-w-[580px]">
+            <p className="text-[13px] md:text-[16px] text-white/60 font-['Roboto'] leading-[1.6] max-w-[580px]">
               <span>Your trusted global partner for full-cycle digital development—backed by strict NDAs and complete confidentiality. </span>
               <span className="text-[#146ef6] font-medium">No tech jargon, just clear communication, real results, and on-time delivery</span>
               <span> tailored to your clients' needs.</span>
@@ -57,10 +57,10 @@ export default function HeroFigma() {
           </div>
 
           {/* Right side - Enhanced iPhone Animation */}
-          <div className="flex-1 flex justify-center lg:justify-end items-center">
+          <div className="flex-1 w-full flex justify-center lg:justify-end items-center">
             <div className="relative">
               {/* Larger animated iPhone mockup */}
-              <div className="relative w-[320px] md:w-[420px] lg:w-[480px]">
+              <div className="relative w-[260px] sm:w-[320px] md:w-[420px] lg:w-[480px]">
                 {/* Background hero preview */}
                 <img 
                   src={HERO_ASSETS.heroPreview} 

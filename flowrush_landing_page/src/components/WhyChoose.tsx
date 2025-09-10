@@ -93,20 +93,20 @@ export default function WhyChoose({ onConnect }: Props) {
   }
 
   return (
-    <section className="bg-[#0a0a0f] px-6 sm:px-10 lg:px-[180px] py-28">
+    <section className="bg-[#0a0a0f] px-4 sm:px-10 lg:px-[180px] py-16 md:py-28">
       <div className="text-center">
-        <h2 className="text-3xl sm:text-5xl lg:text-[64px] leading-tight font-bold">
+        <h2 className="text-[30px] sm:text-5xl lg:text-[64px] leading-tight font-bold">
           <span className="text-[#146ef6]">Why Choose Flowrush Technologies</span>
           <br />
           <span className="text-white">as Your White Label Partner</span>
         </h2>
       </div>
 
-      <div className="mt-14 content-stretch flex gap-[42px] items-center justify-start">
+      <div className="mt-10 md:mt-14 content-stretch flex flex-col xl:flex-row gap-[24px] xl:gap-[42px] items-start justify-start">
         {/* Left: exact Figma cards container */}
-        <div className="basis-0 content-start flex flex-wrap gap-[21px] grow items-start justify-start min-h-px min-w-px relative">
+        <div className="basis-0 content-start grid grid-cols-1 sm:grid-cols-2 gap-[18px] grow items-start justify-start min-h-px min-w-px relative">
           {/* Card 1 */}
-          <div className="box-border content-stretch flex gap-[18px] h-[129px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] h-auto items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]">
               <div className="relative shrink-0 size-[21px]">
                 <div className="absolute inset-[8.333%]"><img alt="" className="block max-w-none size-full" src={img} /></div>
@@ -120,7 +120,7 @@ export default function WhyChoose({ onConnect }: Props) {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="box-border content-stretch flex gap-[18px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]">
               <div className="relative shrink-0 size-[21px]">
                 <div className="absolute inset-[62.5%_33.33%_12.5%_8.33%]"><img alt="" className="block max-w-none size-full" src={img3} /></div>
@@ -135,7 +135,7 @@ export default function WhyChoose({ onConnect }: Props) {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="box-border content-stretch flex gap-[18px] h-[129px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]">
               <div className="relative shrink-0 size-[21px]"><div className="absolute inset-[8.32%_12.49%]"><img alt="" className="block max-w-none size-full" src={img7} /></div></div>
             </div>
@@ -145,7 +145,7 @@ export default function WhyChoose({ onConnect }: Props) {
             </div>
           </div>
           {/* Card 4 */}
-          <div className="box-border content-stretch flex gap-[18px] h-[129px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]"><div className="relative shrink-0 size-[21px]"><div className="absolute inset-[12.5%]"><img alt="" className="block max-w-none size-full" src={img8} /></div></div></div>
             <div className="basis-0 content-stretch flex flex-col gap-[5.875px] grow items-start justify-start leading-[0] min-h-px min-w-px">
               <div className="flex flex-col font-['Poppins:Medium',_sans-serif] not-italic text-[16px] text-slate-50 tracking-[-0.16px] w-full"><p className="leading-[1.5]">24/7 Global Support</p></div>
@@ -153,7 +153,7 @@ export default function WhyChoose({ onConnect }: Props) {
             </div>
           </div>
           {/* Card 5 */}
-          <div className="box-border content-stretch flex gap-[18px] h-[129px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]">
               <div className="relative shrink-0 size-[21px]">
                 <div className="absolute inset-[45.83%_12.5%_8.33%_12.5%]"><img alt="" className="block max-w-none size-full" src={img9} /></div>
@@ -166,7 +166,7 @@ export default function WhyChoose({ onConnect }: Props) {
             </div>
           </div>
           {/* Card 6 */}
-          <div className="box-border content-stretch flex gap-[18px] h-[129px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]">
               <div className="relative shrink-0 size-[21px]">
                 <div className="absolute inset-[8.333%]"><img alt="" className="block max-w-none size-full" src={img} /></div>
@@ -180,7 +180,7 @@ export default function WhyChoose({ onConnect }: Props) {
             </div>
           </div>
           {/* Card 7 */}
-          <div className="box-border content-stretch flex gap-[18px] h-[129px] items-start justify-start min-w-[300px] p-[14px] relative rounded-[14.5px] w-[365px]">
+          <div className="box-border content-stretch flex gap-[14px] items-start justify-start p-[14px] relative rounded-[14.5px] w-full">
             <div className="content-stretch flex items-center justify-center relative rounded-[10.5px] shrink-0 size-[42px]">
               <div className="relative shrink-0 size-[21px]">
                 <div className="absolute inset-[8.32%_8.32%_8.35%_8.34%]"><img alt="" className="block max-w-none size-full" src={img13} /></div>
@@ -197,14 +197,14 @@ export default function WhyChoose({ onConnect }: Props) {
         {/* Right: Figma-styled form container */}
         <form
           onSubmit={handleSubmit}
-          className="backdrop-blur-sm backdrop-filter bg-[rgba(26,26,36,0.6)] box-border content-stretch flex flex-col gap-7 items-start justify-start p-[48px] relative rounded-[14px] w-[720px] max-w-full border border-[rgba(255,255,255,0.1)] shadow-[0px_0px_40px_0px_rgba(99,102,241,0.15)]"
+          className="backdrop-blur-sm backdrop-filter bg-[rgba(26,26,36,0.6)] box-border content-stretch flex flex-col gap-6 md:gap-7 items-start justify-start p-[20px] md:p-[36px] relative rounded-[14px] w-full xl:w-[720px] max-w-full border border-[rgba(255,255,255,0.1)] shadow-[0px_0px_40px_0px_rgba(99,102,241,0.15)]"
         >
           <div className="text-center">
             <div className="text-indigo-500 text-xl font-medium">Request a Call Back</div>
             <div className="text-zinc-300">Available 24/7, Worldwide</div>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+          <div className="mt-4 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
             <div>
               <label className="block text-gray-400 text-sm mb-2">Full Name</label>
               <input
