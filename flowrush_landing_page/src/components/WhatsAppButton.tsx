@@ -30,7 +30,7 @@ export default function WhatsAppButton() {
           </div>
         )}
 
-        {/* Main Button */}
+        {/* Main Button with Backlight Reflector */}
         <a
           href="https://wa.me/919116098187"
           target="_blank"
@@ -41,11 +41,29 @@ export default function WhatsAppButton() {
         >
           {/* Button Container */}
           <div className="relative w-16 h-16 md:w-18 md:h-18">
+            {/* Backlight Reflector - Outer Ring */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400/30 to-green-500/30 animate-pulse blur-md scale-110"></div>
+            
+            {/* Backlight Reflector - Animated Ring */}
+            <div className="absolute inset-0 rounded-full">
+              <div className="absolute inset-0 rounded-full bg-gradient-conic from-green-400 via-green-500 via-green-600 to-green-400 opacity-60 animate-spin" style={{ animationDuration: '3s' }}></div>
+              <div className="absolute inset-1 rounded-full bg-gradient-to-br from-slate-900 to-slate-800"></div>
+            </div>
+            
+            {/* Inner Reflection Ring */}
+            <div className="absolute inset-1 rounded-full bg-gradient-to-br from-green-400/20 to-transparent"></div>
+            
             {/* Main Button */}
-            <div className="relative w-full h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(34,197,94,0.4)] hover:shadow-[0_12px_40px_rgba(34,197,94,0.6)] hover:scale-105 transition-all duration-300 overflow-hidden">
+            <div className="relative w-full h-full bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(34,197,94,0.4)] hover:shadow-[0_16px_48px_rgba(34,197,94,0.7)] hover:scale-105 transition-all duration-500 overflow-hidden border border-green-400/20">
+              {/* Shimmer Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform rotate-45 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              
+              {/* Inner Glow */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-green-400/40 to-transparent"></div>
+              
               {/* WhatsApp Icon */}
               <svg 
-                className="w-8 h-8 md:w-9 md:h-9 text-white transition-transform duration-300 relative z-10" 
+                className="w-8 h-8 md:w-9 md:h-9 text-white transition-transform duration-300 relative z-10 drop-shadow-lg" 
                 fill="currentColor" 
                 viewBox="0 0 24 24"
               >
@@ -53,8 +71,9 @@ export default function WhatsAppButton() {
               </svg>
             </div>
 
-            {/* Online Status Indicator */}
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white">
+            {/* Enhanced Online Status Indicator */}
+            <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gradient-to-br from-green-300 to-green-500 rounded-full border-2 border-white shadow-lg">
+              <div className="absolute inset-0.5 bg-green-400 rounded-full animate-ping opacity-75"></div>
             </div>
           </div>
         </a>
