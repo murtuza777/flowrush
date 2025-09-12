@@ -9,11 +9,12 @@ function IconPlan() {
   );
 }
 
-function IconDesign() {
+// New dev/code icon for the Design & Develop slide
+function IconCode() {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-white">
-      <path d="M3 17l6.5-6.5M14 4l6 6M8 21l3-3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M14 4l6 6-9 9H8v-3l9-9z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M9 18l-6-6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M15 6l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -61,7 +62,7 @@ export default function ProcessSteps() {
       title: "Design & Develop",
       description: "Our expert team crafts tailored web, software, and app solutions that align with your client's vision.",
       progress: 40,
-      icon: <IconDesign />
+      icon: <IconCode />
     },
     {
       number: "3",
@@ -95,14 +96,12 @@ export default function ProcessSteps() {
   }, [steps.length]);
 
   return (
-    <section className="bg-[#0a0a0f] py-[60px] md:py-[84px] px-4 sm:px-8 lg:px-20 xl:px-[180px]">
-      <div className="max-w-[1552px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-20 items-stretch lg:items-center">
+    <section className="bg-[#0a0a0f] min-h-screen flex items-center px-4 sm:px-8 lg:px-20 xl:px-[180px] py-12 md:py-16">
+      <div className="max-w-[1552px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-20 items-stretch lg:items-center w-full">
         {/* Left side - Content */}
         <div className="flex-1 max-w-[759px]">
-          <h2 className="font-['Poppins'] font-bold text-[34px] sm:text-[48px] lg:text-[64px] leading-[1.2] tracking-[-0.32px] mb-4 md:mb-8">
-            <span className="text-[#146ef6]">5-Step Process to Keep</span>
-            <br />
-            <span className="text-slate-50">Your Clients Happy</span>
+          <h2 className="font-['Poppins'] font-bold leading-[1.2] tracking-[-0.32px] mb-4 md:mb-8 text-white text-[28px] sm:text-[42px] lg:text-[64px]">
+            <span className="text-[#146ef6]">5-Step Process</span> to Keep Your Clients Happy
           </h2>
           
           <p className="text-[15px] md:text-[16px] text-zinc-500 font-['Roboto'] leading-[1.7] max-w-[600px]">
@@ -112,23 +111,21 @@ export default function ProcessSteps() {
 
         {/* Right side - Process Steps Carousel */}
         <div className="flex-1 max-w-[730px]">
-          <div className="relative h-[420px] sm:h-[360px] overflow-hidden rounded-[24px]">
+          <div className="relative h-[380px] sm:h-[400px] md:h-[420px] overflow-hidden rounded-[24px]">
             {/* Steps container */}
-            <div 
-              className="flex transition-transform duration-500 ease-in-out h-full"
-              style={{ transform: `translateX(-${currentStep * 100}%)` }}
+            <div
+              className="flex h-full will-change-transform"
+              style={{ transform: `translateX(-${currentStep * 100}%)`, transition: 'transform 800ms cubic-bezier(0.22, 1, 0.36, 1)' }}
             >
               {steps.map((step, index) => (
                 <div key={index} className="w-full flex-shrink-0 h-full">
-                  <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] border border-[#146ef6] rounded-[24px] p-12 h-full flex flex-col justify-center shadow-[0_0_40px_rgba(99,102,241,0.15)] transition-transform duration-300 hover:scale-[1.02]">
+                  <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] border border-white/15 rounded-[24px] p-12 h-full flex flex-col justify-center shadow-[0_0_40px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:scale-[1.01]">
                     {/* Step header */}
-                    <div className="flex items-center justify-between min-h-[120px] mb-[18px]">
+                    <div className="flex items-center justify-between min-h-[110px] mb-[18px]">
                       <div className="flex items-center gap-6 pr-5">
-                        {/* Animated icon */}
-                        <div className="w-[96px] h-[96px] relative overflow-visible">
-                          <div className="absolute -left-1 -top-1 w-[96px] h-[96px] bg-gradient-to-br from-[#146ef6] to-[#2b7fff] rounded-full flex items-center justify-center animate-[pop_600ms_ease-out] shadow-[0_0_24px_rgba(20,110,246,0.35)]">
-                            {step.icon}
-                          </div>
+                        {/* Icon */}
+                        <div className="w-[88px] h-[88px] rounded-full bg-black/60 border border-white/15 grid place-items-center shadow-[0_6px_24px_rgba(0,0,0,0.35)]">
+                          {step.icon}
                         </div>
                         
                         <div className="flex flex-col items-start">
@@ -137,7 +134,7 @@ export default function ProcessSteps() {
                               STEP {step.number}
                             </span>
                           </div>
-                          <h3 className="font-['Poppins'] font-medium text-[22px] text-slate-50 leading-[1.3] text-left">
+                          <h3 className="font-['Poppins'] font-medium text-[22px] text-white leading-[1.3] text-left">
                             {step.title}
                           </h3>
                         </div>
@@ -147,7 +144,7 @@ export default function ProcessSteps() {
                       <div className="w-20 h-20 relative">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                           <path
-                            className="text-gray-600"
+                            className="text-white/20"
                             stroke="currentColor"
                             strokeWidth="2"
                             fill="transparent"
@@ -172,7 +169,7 @@ export default function ProcessSteps() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-[16px] text-white/70 font-['Roboto'] leading-[1.7] mb-12">
+                    <p className="text-[16px] text-white/80 font-['Roboto'] leading-[1.8] mb-10">
                       {step.description}
                     </p>
 
