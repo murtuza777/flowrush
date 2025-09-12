@@ -78,19 +78,7 @@ void main() {
                                    0.02 * tOffset) +
                            sin(20.0 * (tex.x + tex.y - 0.1 * tOffset)));
 
-  // Create gradient using #66B0FF color
-  vec3 lightBlue = vec3(0.4, 0.69, 1.0);  // #66B0FF converted to RGB
-  vec3 darkBlue = vec3(0.2, 0.45, 0.8);   // Darker version of #66B0FF
-  vec3 black = vec3(0.0, 0.0, 0.1);       // Almost black with slight blue tint
-  
-  // Create gradient based on UV coordinates
-  float gradientFactor = length(uv - 0.5) * 2.0; // Distance from center
-  gradientFactor = smoothstep(0.0, 1.0, gradientFactor);
-  
-  vec3 gradientColor = mix(lightBlue, darkBlue, gradientFactor);
-  gradientColor = mix(gradientColor, black, gradientFactor * 0.7);
-  
-  vec4 col = vec4(gradientColor, 1.0) * vec4(pattern) - rnd / 15.0 * uNoiseIntensity;
+  vec4 col = vec4(uColor, 1.0) * vec4(pattern) - rnd / 15.0 * uNoiseIntensity;
   col.a = 1.0;
   gl_FragColor = col;
 }
@@ -98,6 +86,7 @@ void main() {
 
 interface SilkPlaneProps {
   uniforms: SilkUniforms;
+  themeColor?: string;
 }
 
 const SilkPlane = forwardRef<Mesh, SilkPlaneProps>(function SilkPlane({ uniforms }, ref) {
