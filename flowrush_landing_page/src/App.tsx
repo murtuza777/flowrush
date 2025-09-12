@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
@@ -8,11 +8,15 @@ import Tools from './components/Tools';
 import WhyChoose from './components/WhyChoose';
 import PartnerExcellence from './components/PartnerExcellence';
 import WhyTrust from './components/WhyTrust';
+import Recognitions from './components/Recognitions';
 import FAQ from './components/FAQ';
+import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 import ContactForm from './components/ContactForm';
 import FloatingButtons from './components/FloatingButtons';
+import WhatsAppButton from './components/WhatsAppButton';
+import ThemeToggle from './components/ThemeToggle';
 import Silk from './components/Silk';
 
 function App() {
@@ -20,19 +24,49 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+
+  // Load theme from localStorage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      // Default to dark theme
+      setTheme('dark');
+    }
+  }, []);
+
+  // Apply theme to document
+  useEffect(() => {
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const handleThemeChange = (newTheme: 'light' | 'dark') => {
+    setTheme(newTheme);
+  };
 
   return (
-    <div className="min-h-screen text-white relative">
+    <div className={`min-h-screen relative transition-colors duration-300 ${
+      theme === 'dark' 
+        ? 'text-white bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900' 
+        : 'text-slate-900 bg-gradient-to-br from-blue-50 via-white to-blue-50'
+    }`}>
       {/* Animated Background */}
       <div className="fixed inset-0 z-0 w-full h-full">
         <Silk
           speed={5}
           scale={1}
-          color="#7B7481"
+          color="#0008FF"
           noiseIntensity={1.5}
           rotation={0}
         />
       </div>
+      
+      {/* Theme Toggle */}
+      <ThemeToggle onThemeChange={handleThemeChange} currentTheme={theme} />
       
       {/* Content */}
       <div className="relative z-10">
@@ -51,6 +85,8 @@ function App() {
         <ProcessSteps />
         <PartnerExcellence />
         <WhyTrust />
+        <Recognitions />
+        <Testimonials />
         <Tools />
         <FAQ />
       </main>
@@ -65,6 +101,7 @@ function App() {
 
       {/* Floating Buttons */}
       <FloatingButtons onOpenContact={() => setIsContactModalOpen(true)} />
+      <WhatsAppButton />
 
       {/* Modals */}
       <Modal 
