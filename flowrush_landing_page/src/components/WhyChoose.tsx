@@ -73,6 +73,12 @@ const features = [
       'We partner with chosen agencies, offering dedicated attention and long-term collaboration.',
     icon: StarIcon,
   },
+  {
+    title: 'Global Trust',
+    description:
+      'Chosen by leading digital vendors and agencies worldwide.',
+    icon: StarIcon,
+  },
 ];
 
 export default function WhyChoose({ onConnect }: Props) {
@@ -94,7 +100,7 @@ export default function WhyChoose({ onConnect }: Props) {
   };
 
   return (
-    <section className="py-12 md:py-20 lg:py-28 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
       {/* Enhanced Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" />
@@ -111,10 +117,8 @@ export default function WhyChoose({ onConnect }: Props) {
               <span className="text-[#66B0FF] text-sm font-medium uppercase tracking-wide">WHY CHOOSE US</span>
             </div>
           </div>
-          <h2 className="font-['Poppins'] font-bold text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] leading-[1.1] tracking-[-0.02em] mb-6">
-            <span className="text-[#66B0FF]">Trusted by Agencies</span>
-            <br />
-            <span className="text-slate-50">Worldwide</span>
+          <h2 className="font-['Poppins'] font-bold text-white text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px] leading-[1.2] tracking-[-0.02em] mb-6">
+            Why Choose Flowrush Technologies as Your White Label Partner
           </h2>
           <p className="text-white/70 text-[16px] md:text-[17px] lg:text-[18px] font-['Roboto'] leading-[1.6] max-w-[700px] mx-auto px-4">
             We're not just another development team—we're your strategic technology partner, dedicated to making your agency more successful.
@@ -148,12 +152,10 @@ export default function WhyChoose({ onConnect }: Props) {
           {/* Contact Form */}
           <div className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] rounded-2xl border border-white/10 p-8">
             <div className="mb-6">
-              <h3 className="font-['Poppins'] font-bold text-[24px] text-white mb-2">
-                Ready to Partner?
+              <h3 className="font-['Poppins'] font-bold text-[22px] md:text-[24px] text-white mb-2">
+                Request a Call Back – Available 24/7, Worldwide
               </h3>
-              <p className="text-zinc-400 text-[14px] font-['Roboto']">
-                Connect with our team to discuss your white-label development needs.
-              </p>
+              <p className="text-zinc-400 text-[14px] font-['Roboto']">We typically respond within a few hours.</p>
           </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
