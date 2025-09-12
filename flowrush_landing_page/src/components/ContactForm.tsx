@@ -38,7 +38,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
       </div>
-      <button type="button" onClick={onClose} className="w-full rounded-md bg-primary px-4 py-2 text-white hover:bg-primary/90">Connect Now</button>
+      <button type="button" onClick={onClose} className="w-full rounded-md bg-primary px-4 py-2 text-black hover:bg-primary/90 transition-all duration-300">Connect Now</button>
     </form>
   );
 }
