@@ -1,24 +1,23 @@
 
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-start pt-4 sm:pt-7">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Enhanced floating particles */}
-        <div className="absolute top-16 left-4 md:top-20 md:left-20 w-2 h-2 bg-[#66B0FF] rounded-full animate-pulse opacity-60" />
-        <div className="absolute top-32 right-8 md:top-40 md:right-32 w-3 h-3 bg-[#4A90E2] rounded-full animate-bounce opacity-50" />
-        <div className="absolute bottom-24 left-1/4 w-1 h-1 bg-[#66B0FF] rounded-full animate-ping opacity-60" />
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-[#4A90E2] rounded-full animate-pulse opacity-40" />
-        <div className="absolute top-1/2 left-8 md:left-16 w-1 h-1 bg-[#66B0FF] rounded-full animate-ping opacity-50" />
-        <div className="absolute bottom-1/3 right-12 md:right-24 w-2 h-2 bg-[#4A90E2] rounded-full animate-bounce opacity-40" />
+        {/* Enhanced floating particles (dark blue theme) */}
+        <div className="absolute top-16 left-4 md:top-20 md:left-20 w-2 h-2 bg-[#1e3a8a] rounded-full animate-pulse opacity-60" />
+        <div className="absolute top-32 right-8 md:top-40 md:right-32 w-3 h-3 bg-[#1d4ed8] rounded-full animate-bounce opacity-50" />
+        <div className="absolute bottom-24 left-1/4 w-1 h-1 bg-[#1e3a8a] rounded-full animate-ping opacity-60" />
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-[#1d4ed8] rounded-full animate-pulse opacity-40" />
+        <div className="absolute top-1/2 left-8 md:left-16 w-1 h-1 bg-[#1e3a8a] rounded-full animate-ping opacity-50" />
+        <div className="absolute bottom-1/3 right-12 md:right-24 w-2 h-2 bg-[#1d4ed8] rounded-full animate-bounce opacity-40" />
         
-        {/* Animated orbs */}
-        <div className="absolute top-10 right-1/3 w-20 h-20 bg-[#66B0FF] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" />
-        <div className="absolute bottom-10 left-1/4 w-32 h-32 bg-[#4A90E2] rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-pulse animation-delay-2000" />
+        {/* Animated orbs (dark blue theme) */}
+        <div className="absolute top-10 right-1/3 w-20 h-20 bg-[#1d4ed8] rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-pulse" />
+        <div className="absolute bottom-10 left-1/4 w-32 h-32 bg-[#1e3a8a] rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse animation-delay-2000" />
         
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(102,176,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(102,176,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px] sm:bg-[size:40px_40px] md:bg-[size:50px_50px]" />
+        {/* Grid pattern - darker tint */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(30,64,175,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(30,64,175,0.08)_1px,transparent_1px)] bg-[size:20px_20px] sm:bg-[size:40px_40px] md:bg-[size:50px_50px]" />
       </div>
 
        {/* Full width container - optimized for viewport */}
@@ -28,56 +27,56 @@ export default function Hero() {
           
           {/* Left side - Content */}
           <div className="flex-1 w-full max-w-[700px] text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#66B0FF]/10 border border-[#66B0FF]/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-2 sm:mb-3 md:mb-4">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#66B0FF] rounded-full animate-pulse"></div>
-              <span className="text-[#66B0FF] text-xs sm:text-sm font-medium">Trusted by 150+ Agencies Worldwide</span>
-            </div>
-            
             {/* Main heading - optimized for viewport */}
-            <h1 className="font-['Poppins'] font-bold text-[24px] xs:text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] xl:text-[56px] leading-[1.2] sm:leading-[1.1] tracking-[-0.02em] mb-2 sm:mb-3 md:mb-4">
-              <span className="text-[#146ef6]">White Label Global Experts in Web,</span>
-              <br />
-              <span className="text-slate-50 relative">
-                Software & App Development
-                <span className="inline-block w-0.5 sm:w-1 h-[0.8em] bg-[#146ef6] ml-1 sm:ml-2 animate-pulse">|</span>
-              </span>
+            <h1 className="font-['Poppins'] font-bold text-[24px] xs:text-[28px] sm:text-[32px] md:text-[40px] lg:text-[52px] xl:text-[56px] leading-[1.2] sm:leading-[1.1] tracking-[-0.02em] mb-2 sm:mb-3 md:mb-4 text-white">
+              White Label Web Development Agency
             </h1>
 
-            {/* Description */}
-            <p className="text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] text-white/80 font-['Roboto'] leading-[1.5] mb-4 sm:mb-5 md:mb-6 max-w-[560px] mx-auto lg:mx-0 px-2 sm:px-0">
-              We provide comprehensive global white-label technology solutions, working closely with a curated selection of agencies to serve as their trusted strategic technology partners.
+            {/* Description (Subheadline) */}
+            <p className="text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] text-white font-['Roboto'] leading-[1.6] mb-4 sm:mb-5 md:mb-6 max-w-[560px] mx-auto lg:mx-0 px-2 sm:px-0">
+              we are white label web development company based in india, we offer white label website development services , white label app development services , and custom white label tech services worldwide
             </p>
+
+            {/* Pointers */}
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6 max-w-[600px] mx-auto lg:mx-0 px-2 sm:px-0">
+              <li className="flex items-center gap-2 text-white text-[13px] sm:text-[14px]">
+                <span className="inline-block w-2 h-2 rounded-full bg-[#66B0FF]"></span>
+                Strong website development expertise
+              </li>
+              <li className="flex items-center gap-2 text-white text-[13px] sm:text-[14px]">
+                <span className="inline-block w-2 h-2 rounded-full bg-[#66B0FF]"></span>
+                Custom tech solutions
+              </li>
+              <li className="flex items-center gap-2 text-white text-[13px] sm:text-[14px]">
+                <span className="inline-block w-2 h-2 rounded-full bg-[#66B0FF]"></span>
+                Lifetime support
+              </li>
+              <li className="flex items-center gap-2 text-white text-[13px] sm:text-[14px]">
+                <span className="inline-block w-2 h-2 rounded-full bg-[#66B0FF]"></span>
+                Fair transparent pricing
+              </li>
+            </ul>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 items-center justify-center lg:justify-start mb-3 sm:mb-4 md:mb-6 px-2 sm:px-0">
-              <button className="group relative bg-gradient-to-r from-[#66B0FF] to-[#4A90E2] hover:from-[#5AA3FF] hover:to-[#3D7BC7] text-white px-5 py-3 sm:px-7 sm:py-3.5 rounded-xl font-['Poppins'] font-semibold text-[14px] sm:text-[15px] transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_32px_rgba(102,176,255,0.4)] overflow-hidden w-full sm:w-auto sm:min-w-[180px] max-w-[280px] sm:max-w-none">
+              <button className="group relative bg-gradient-to-r from-[#3b82f6] to-[#0008FF] hover:from-[#2563eb] hover:to-[#0006cc] text-white px-5 py-3 sm:px-7 sm:py-3.5 rounded-xl font-['Poppins'] font-semibold text-[14px] sm:text-[15px] transition-all duration-300 hover:scale-[1.03] shadow-[0_6px_24px_rgba(0,8,255,0.25)] overflow-hidden w-full sm:w-auto sm:min-w-[180px] max-w-[280px] sm:max-w-none">
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                   Connect with Team
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              </button>
-              
-              <button className="group relative bg-white/10 backdrop-blur-sm border border-white/20 hover:border-[#66B0FF]/50 text-white px-5 py-3 sm:px-7 sm:py-3.5 rounded-xl font-['Poppins'] font-medium text-[14px] sm:text-[15px] transition-all duration-300 hover:bg-white/20 w-full sm:w-auto sm:min-w-[180px] max-w-[280px] sm:max-w-none">
-                <span className="flex items-center justify-center gap-2">
-                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  Watch Demo
-                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               </button>
             </div>
 
             {/* Bottom text */}
-            <p className="text-[10px] sm:text-[12px] md:text-[14px] text-white/60 font-['Roboto'] leading-[1.5] max-w-[500px] mx-auto lg:mx-0 px-2 sm:px-0">
-              <span className="text-[#66B0FF] font-medium">✓ Strict NDAs</span>
+            <p className="text-[10px] sm:text-[12px] md:text-[14px] text-white font-['Roboto'] leading-[1.5] max-w-[500px] mx-auto lg:mx-0 px-2 sm:px-0">
+              <span className="text-white font-medium">✓ Strict NDAs</span>
               <span className="mx-1 sm:mx-2">•</span>
-              <span className="text-[#66B0FF] font-medium">✓ On-time delivery</span>
+              <span className="text-white font-medium">✓ On-time delivery</span>
               <span className="mx-1 sm:mx-2">•</span>
-              <span className="text-[#66B0FF] font-medium">✓ 24/7 support</span>
+              <span className="text-white font-medium">✓ 24/7 support</span>
             </p>
           </div>
 
@@ -170,10 +169,10 @@ export default function Hero() {
                   </div>
                 </div>
                 
-                {/* Additional floating particles around the scene */}
-                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 md:top-10 md:left-10 w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-[#146ef6] rounded-full animate-pulse opacity-40" />
-                <div className="absolute bottom-8 left-12 sm:bottom-12 sm:left-16 md:bottom-16 md:left-20 w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-[#00b8db] rounded-full animate-bounce opacity-60" />
-                <div className="absolute top-1/3 left-3 sm:left-4 md:left-5 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-[#2b7fff] rounded-full animate-ping opacity-30" />
+                {/* Additional floating particles around the scene (dark blue theme) */}
+                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 md:top-10 md:left-10 w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-[#1e40af] rounded-full animate-pulse opacity-40" />
+                <div className="absolute bottom-8 left-12 sm:bottom-12 sm:left-16 md:bottom-16 md:left-20 w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-[#0ea5e9] rounded-full animate-bounce opacity-50" />
+                <div className="absolute top-1/3 left-3 sm:left-4 md:left-5 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-[#1d4ed8] rounded-full animate-ping opacity-30" />
               </div>
             </div>
           </div>
