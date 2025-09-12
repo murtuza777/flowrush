@@ -218,11 +218,26 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 px-2 sm:px-4 py-1 sm:py-2 md:py-3">
       <div className="w-full max-w-6xl mx-auto">
-        <div className="backdrop-blur-md bg-[rgba(30,58,138,0.2)] border border-white/20 rounded-full shadow-lg shadow-blue-500/10 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 flex items-center justify-between">
-          <div className="h-[32px] w-[120px] sm:h-[40px] sm:w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${HEADER_ASSETS.logo}')` }} />
+        <div className="relative backdrop-blur-xl bg-gradient-to-r from-white/10 via-white/5 to-white/10 border border-white/20 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.15)] px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 flex items-center justify-between transition-all duration-300 overflow-visible">
+          {/* Glass effect overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-white/[0.04] rounded-2xl"></div>
+          
+          {/* Inner border highlight */}
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+          
+          {/* Animated background particles */}
+          <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+            <div className="absolute top-2 left-4 w-1 h-1 bg-blue-400/40 rounded-full animate-ping"></div>
+            <div className="absolute top-4 right-8 w-0.5 h-0.5 bg-purple-400/30 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-3 left-12 w-1.5 h-1.5 bg-cyan-400/20 rounded-full animate-bounce"></div>
+          </div>
+          
+          {/* Content with relative positioning */}
+          <div className="relative z-10 flex items-center justify-between w-full">
+            <div className="h-[32px] w-[120px] sm:h-[40px] sm:w-[150px] md:h-[51px] md:w-[180px] bg-no-repeat bg-[length:110%_388.24%] bg-[52.8%_45.92%]" style={{ backgroundImage: `url('${HEADER_ASSETS.logo}')` }} />
 
-          {/* Navigation - Clean minimal design */}
-          <nav className="hidden lg:flex items-center gap-8 text-white">
+            {/* Navigation - Clean minimal design */}
+            <nav className="hidden lg:flex items-center gap-8 text-white">
             <div className="relative">
               <button 
                 onClick={toggleServices}
@@ -240,20 +255,20 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
               About
             </button>
             
-            <button 
-              onClick={onOpenContact} 
-              className="hover:text-blue-300 transition-colors duration-200"
-            >
-              Contact
-            </button>
-          </nav>
+              <button 
+                onClick={onOpenContact} 
+                className="hover:text-blue-300 transition-colors duration-200"
+              >
+                Contact
+              </button>
+            </nav>
 
-          {/* Mobile menu button */}
-          <button
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white"
-          >
+            {/* Mobile menu button */}
+            <button
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              onClick={() => setMobileOpen((v) => !v)}
+              className="lg:hidden p-2 text-gray-300 hover:text-white"
+            >
             {mobileOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -262,29 +277,32 @@ export default function Header({ onOpenAbout, onOpenContact }: HeaderProps) {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            )}
-          </button>
+              )}
+            </button>
 
-          {/* Book a Meeting Button */}
-          <a
-            href="https://calendly.com/sahaj-baveja"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:flex bg-gradient-to-r from-blue-500 to-blue-900 hover:from-blue-400 hover:to-blue-800 text-white px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-200 items-center gap-1 sm:gap-2 shadow-lg hover:shadow-blue-500/20 text-sm sm:text-base"
-          >
+            {/* Book a Meeting Button */}
+            <a
+              href="https://calendly.com/sahaj-baveja"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:flex bg-gradient-to-r from-blue-500 to-blue-900 hover:from-blue-400 hover:to-blue-800 text-white px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-full transition-all duration-200 items-center gap-1 sm:gap-2 shadow-lg hover:shadow-blue-500/20 text-sm sm:text-base"
+            >
             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <span className="hidden sm:inline">Book a Meeting</span>
-            <span className="sm:hidden">Book</span>
-          </a>
+              <span className="hidden sm:inline">Book a Meeting</span>
+              <span className="sm:hidden">Book</span>
+            </a>
+          </div>
         </div>
       </div>
       
       {/* Mobile slide-down menu */}
       {mobileOpen && (
-        <div className="lg:hidden backdrop-blur-md bg-[rgba(30,58,138,0.3)] border border-white/20 mx-4 mt-2 rounded-2xl shadow-lg shadow-blue-500/10">
-          <div className="max-w-[1440px] mx-auto px-4 py-4 space-y-2">
+        <div className="lg:hidden relative backdrop-blur-xl bg-gradient-to-r from-white/10 via-white/5 to-white/10 border border-white/20 mx-4 mt-2 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.15)] overflow-hidden">
+          {/* Glass effect overlay for mobile menu */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-white/[0.04] rounded-2xl"></div>
+          <div className="relative z-10 max-w-[1440px] mx-auto px-4 py-4 space-y-2">
             {/* Services Mobile Dropdown */}
             <details className="group">
               <summary className="flex items-center justify-between text-gray-200 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer">
