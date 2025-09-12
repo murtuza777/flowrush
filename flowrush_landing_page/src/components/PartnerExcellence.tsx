@@ -7,7 +7,7 @@ const CheckIcon = () => (
 
 export default function PartnerExcellence() {
   return (
-    <section className="bg-[#0a0a0f] px-6 sm:px-10 lg:px-[180px] py-28 relative overflow-hidden" data-name="Section">
+    <section className="bg-[#0a0a0f] min-h-screen flex items-center px-6 sm:px-10 lg:px-[180px] py-16 relative overflow-hidden" data-name="Section">
       {/* Background gradient accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bg-gradient-to-r from-[#6366f133] to-[#2b7fff33] blur-[32px] opacity-60 rounded-full left-[33%] right-[51.7%] top-[18.3%] bottom-[44.7%]" />
