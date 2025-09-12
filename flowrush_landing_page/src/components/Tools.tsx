@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { TOOLS_ASSETS } from '../assets';
 
 // Simple SVG icons for category representation
@@ -41,173 +41,127 @@ const DesignIcon = () => (
 export default function Tools() {
   const [activeCategory, setActiveCategory] = useState('Web Development');
 
+  // Categories shown as tabs
   const categories = [
-    { name: 'Web Development', icon: [WebIcon, WebIcon] },
-    { name: 'Mobile Development', icon: [MobileIcon, MobileIcon] },
+    { name: 'Web Development', icon: [WebIcon] },
+    { name: 'Mobile Development', icon: [MobileIcon] },
     { name: 'Cloud & DevOps', icon: [CloudIcon] },
     { name: 'AI & Machine Learning', icon: [AIIcon] },
-    { name: 'SEO & Analytics', icon: [SEOIcon, SEOIcon] },
-    { name: 'Design & UX', icon: [DesignIcon, DesignIcon] }
+    { name: 'SEO & Analytics', icon: [SEOIcon] },
+    { name: 'Design & UX', icon: [DesignIcon] }
   ];
 
-  const technologiesByCategory = {
+  // Online logo helper using Simple Icons CDN
+  const si = (slug: string, color?: string) => `https://cdn.simpleicons.org/${slug}/${color ?? 'ffffff'}`;
+
+  const technologiesByCategory = useMemo(() => ({
     'Web Development': [
-      { name: 'React', logo: TOOLS_ASSETS.react },
-      { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
-      { name: 'Vue.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg' },
-      { name: 'Angular', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg' },
-      { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
-      { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
-      { name: 'Laravel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-plain.svg' },
-      { name: 'Django', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg' }
+      { name: 'React', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
+      { name: 'Next.js', logo: si('nextdotjs') },
+      { name: 'Vue.js', logo: si('vuedotjs', '42b883') },
+      { name: 'Node.js', logo: si('nodedotjs', '68A063') },
+      { name: 'Laravel', logo: si('laravel', 'FF2D20') },
+      { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg' },
+      { name: 'GraphQL', logo: si('graphql', 'E10098') },
+      { name: 'GSAP', logo: si('greensock', '88CE02') }
     ],
     'Mobile Development': [
-      { name: 'React Native', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
-      { name: 'Flutter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
-      { name: 'Swift', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg' },
-      { name: 'Kotlin', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg' },
-      { name: 'Ionic', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg' },
-      { name: 'Android', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg' }
+      { name: 'Flutter', logo: si('flutter', '02569B') },
+      { name: 'Swift', logo: si('swift', 'F05138') },
+      { name: 'Kotlin', logo: si('kotlin', '7F52FF') },
+      { name: 'Xamarin', logo: TOOLS_ASSETS.xamarin }
     ],
     'Cloud & DevOps': [
-      { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
-      { name: 'Azure', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
-      { name: 'Google Cloud', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg' },
-      { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
-      { name: 'Kubernetes', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg' },
-      { name: 'Jenkins', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg' }
+      { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
+      { name: 'Azure', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg' },
+      { name: 'Google Cloud', logo: si('googlecloud', '4285F4') },
+      { name: 'Docker', logo: si('docker', '2496ED') },
+      { name: 'Kubernetes', logo: si('kubernetes', '326CE5') },
+      { name: 'Nginx', logo: si('nginx', '269539') }
     ],
     'AI & Machine Learning': [
-      { name: 'TensorFlow', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
-      { name: 'PyTorch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
-      { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
-      { name: 'Jupyter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg' },
-      { name: 'OpenCV', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg' },
-      { name: 'Pandas', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg' }
+      { name: 'OpenAI / DALL·E', logo: si('openai') },
+      { name: 'Stability', logo: TOOLS_ASSETS.stability },
+      { name: 'EleutherAI', logo: 'https://avatars.githubusercontent.com/u/76425555?s=200&v=4' }
     ],
     'SEO & Analytics': [
-      { name: 'Google Analytics', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg' },
-      { name: 'Grafana', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg' },
-      { name: 'Elasticsearch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg' },
-      { name: 'Prometheus', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg' },
-      { name: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg' },
-      { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg' }
+      { name: 'Google Analytics', logo: si('googleanalytics', 'E37400') },
+      { name: 'Elastic', logo: si('elastic', '005571') },
+      { name: 'Kibana', logo: si('kibana', 'E8478B') }
     ],
     'Design & UX': [
-      { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' },
-      { name: 'Adobe XD', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-plain.svg' },
-      { name: 'Sketch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg' },
-      { name: 'Photoshop', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg' },
-      { name: 'Illustrator', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg' },
-      { name: 'Canva', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg' }
+      { name: 'Figma', logo: TOOLS_ASSETS.figma },
+      { name: 'Adobe XD', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg' },
+      { name: 'Photoshop', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
+      { name: 'Sketch', logo: si('sketch', 'F7B500') }
     ]
-  };
+  }) as const, []);
 
   return (
-    <section className="bg-[#0a0a0f] py-28 px-4 sm:px-8 lg:px-20 xl:px-[180px] relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0" />
-      <div className="absolute bg-[rgba(99,102,241,0.1)] blur-[32px] filter opacity-[0.323] right-[32.74px] rounded-full size-[116.52px] top-[32.74px]" />
-      
-      <div className="relative z-10 max-w-[1344px] mx-auto">
-        {/* Header Section */}
-        <div className="flex flex-col gap-5 items-center justify-start mb-[51px]">
-          {/* Badge */}
-          <div className="bg-[rgba(21,16,255,0.1)] border border-[rgba(21,16,255,0.2)] rounded-full px-[15px] py-2">
-            <p className="font-['Roboto'] font-normal text-[14px] leading-[1.6] text-indigo-500 text-center">
-              CUTTING-EDGE TECHNOLOGY
-            </p>
-          </div>
-          
-          {/* Main Heading */}
-          <div className="font-['Poppins'] font-bold text-[64px] leading-[1.2] tracking-[-0.32px] text-center">
-            <p className="text-[#146ef6] mb-0">Tools and Stack</p>
-            <p className="text-slate-50">We Use</p>
-          </div>
-          
-          {/* Subtitle */}
-          <div className="font-['Roboto'] font-normal text-[16px] leading-[1.6] text-zinc-500 text-center max-w-[600px]">
-            <p className="mb-0">We leverage the latest technologies and frameworks to build scalable, high-</p>
-            <p>performance solutions across all platforms</p>
-          </div>
-        </div>
+    <section className="bg-[#0a0a0f] h-screen w-full relative overflow-hidden">
+      {/* subtle background */}
+      <div className="absolute inset-0 opacity-[0.15] bg-[radial-gradient(circle_at_20%_20%,#146ef6_0,transparent_40%),radial-gradient(circle_at_80%_20%,#2b7fff_0,transparent_35%)]" />
 
-        {/* Category Filter Buttons */}
-        <div className="flex flex-wrap gap-3.5 items-center justify-center mb-8">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              onClick={() => setActiveCategory(category.name)}
-              className={`flex gap-[10.5px] items-center px-[21px] py-[11.5px] rounded-full transition-all duration-300 ${
-                activeCategory === category.name
-                  ? 'bg-[#146ef6] border border-[#146ef6] text-white'
-                  : 'bg-[#1a1a24] border border-[rgba(255,255,255,0.1)] hover:border-[#146ef6]/30'
-              }`}
-            >
-              {/* Category Icon */}
-              <div className="size-[17.5px] relative">
-                {category.icon.map((IconComponent, iconIndex) => (
-                  <div key={iconIndex} className="absolute inset-0 size-full">
-                    <IconComponent />
-                  </div>
-                ))}
-              </div>
-              
-              {/* Category Name */}
-              <span className="font-['Roboto'] font-normal text-[14px] leading-[1.6] text-slate-50">
-                {category.name}
-              </span>
-            </button>
-          ))}
-        </div>
-
-        {/* Technology Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
-          {technologiesByCategory[activeCategory as keyof typeof technologiesByCategory]?.map((tech) => (
-            <div
-              key={tech.name}
-              className="backdrop-blur-sm bg-[rgba(26,26,36,0.6)] border border-[rgba(255,255,255,0.05)] rounded-[14px] shadow-[0px_0px_24px_0px_rgba(99,102,241,0.12)] p-8 flex flex-col gap-3 items-center w-full hover:border-[#146ef6]/30 transition-all duration-300 hover:scale-105"
-            >
-              {/* Technology Logo */}
-              <div className="size-12 relative flex items-center justify-center">
-                <img 
-                  alt={tech.name} 
-                  className="size-full object-contain filter drop-shadow-md" 
-                  src={tech.logo}
-                  onError={(e) => {
-                    // Fallback to a generic tech icon if the image fails to load
-                    const img = e.target as HTMLImageElement;
-                    img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iOCIgZmlsbD0iIzE0NmVmNiIvPgo8cGF0aCBkPSJNMjQgMTJMMzYgMjRMMjQgMzZMMTIgMjRMMjQgMTJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K';
-                    img.style.opacity = '0.8';
-                  }}
-                  onLoad={(e) => {
-                    const img = e.target as HTMLImageElement;
-                    img.style.opacity = '1';
-                  }}
-                  style={{ 
-                    opacity: '0',
-                    transition: 'opacity 0.3s ease-in-out'
-                  }}
-                />
-              </div>
-              
-              {/* Technology Name */}
-              <h3 className="font-['Poppins'] font-medium text-[18px] leading-[1.5] text-slate-50 text-center">
-                {tech.name}
-              </h3>
+      <div className="relative z-10 h-full max-w-[1400px] mx-auto px-4 sm:px-8 flex flex-col">
+        {/* Title area */}
+        <div className="pt-10 sm:pt-12 pb-4 sm:pb-6">
+          <div className="mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10">
+              <span className="text-indigo-400 text-xs tracking-wide">WHAT WE USE</span>
             </div>
-          ))}
+            <h2 className="mt-4 font-['Poppins'] font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight">
+              <span className="text-white">Tools, Stack and </span>
+              <span className="text-[#146ef6]">Frameworks We Use</span>
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-white/60 max-w-xl mx-auto">One consolidated view. Pick a category to see the relevant stack.</p>
+          </div>
         </div>
 
-        {/* Bottom CTA Section */}
-        <div className="flex flex-col gap-[21px] items-center">
-          <p className="font-['Roboto'] font-normal text-[16px] leading-[1.6] text-zinc-500 text-center">
-            Don't see the technology you need? We adapt to your preferred stack.
-          </p>
-          
-          <button className="bg-[#146ef6] hover:bg-[#1257d3] text-white px-10 py-2.5 rounded-[8px] font-['Poppins'] font-semibold text-[18px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(20,110,246,0.4)]">
-            Discuss Your Tech Requirements
-          </button>
+        {/* Tabs */}
+        <div className="px-1 sm:px-2">
+          <div className="flex flex-wrap gap-2 sm:gap-3 items-center justify-center">
+            {categories.map((c) => (
+              <button
+                key={c.name}
+                onClick={() => setActiveCategory(c.name)}
+                className={`group relative flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
+                  activeCategory === c.name
+                    ? 'bg-[#146ef6] border-[#146ef6] text-white'
+                    : 'bg-white/5 border-white/10 hover:bg-white/10 text-white/80'
+                }`}
+              >
+                <span className="w-4 h-4 text-current">
+                  {c.icon.map((I, i) => (
+                    <span key={i} className="block w-4 h-4"><I /></span>
+                  ))}
+                </span>
+                <span className="text-xs sm:text-sm font-medium">{c.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Grid area - grows to fill viewport, scrolls internally if needed */}
+        <div className="flex-1 min-h-0">
+          <div className="h-full overflow-auto pt-6 pb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 px-1 sm:px-2">
+              {technologiesByCategory[activeCategory as keyof typeof technologiesByCategory]?.map((tool) => (
+                <div
+                  key={tool.name}
+                  className="group relative rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition-all duration-200 p-4 flex flex-col items-center justify-center text-center"
+                >
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-xl bg-black/20 border border-white/10">
+                    <img
+                      src={tool.logo}
+                      alt={tool.name}
+                      className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                    />
+                  </div>
+                  <div className="mt-3 text-white text-sm font-medium">{tool.name}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
